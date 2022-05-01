@@ -12,8 +12,9 @@ namespace WpfControlLibrary1
             File.Open(workFile, FileMode.OpenOrCreate).Close();
 
             var parser = new TexFormulaParser();
+
             var formula = parser.Parse(latex);
-            var renderer = formula.GetRenderer(TexStyle.Display, 40.0, "Arial");
+            var renderer = formula.GetRenderer(TexStyle.Display, 20.0, "Arial");
             var bitmapSource = renderer.RenderToBitmap(0, 0);
 
             var encoder = new PngBitmapEncoder();
