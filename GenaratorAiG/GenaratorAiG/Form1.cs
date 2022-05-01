@@ -9,7 +9,7 @@ namespace GenaratorAiG
     public partial class Form1 : Form
     {
         private Image im = new Bitmap(1, 1);
-        private string latex = @"\frac{2+2}{2}";
+        private string latex = @"x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}";
         private LatexHandler latexHandler = new LatexHandler();
         public Form1()
         {
@@ -20,10 +20,7 @@ namespace GenaratorAiG
         private void GenerateImage(object sender, System.EventArgs e)
         {
             latex = richTextBox1.Text;
-            im.Dispose();
-            string fileName = latexHandler.CreateLatexImage(latex);
-            im = new Bitmap(fileName);
-            pictureBox1.Image = im;
+            pictureBox1.Image = latexHandler.CreateLatexImage(latex);
         }
     }
 }
