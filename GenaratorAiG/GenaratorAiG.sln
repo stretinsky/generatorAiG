@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32328.378
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenaratorAiG", "GenaratorAiG\GenaratorAiG.csproj", "{C8973A20-5F55-4781-897C-047644E293D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks", "Tasks\Tasks.csproj", "{525CF898-1C59-4F6F-9DE7-CD768F710B2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfControlLibrary1", "WpfControlLibrary1\WpfControlLibrary1.csproj", "{4F7BE54F-63F8-4431-9850-D376F0671861}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{C8973A20-5F55-4781-897C-047644E293D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8973A20-5F55-4781-897C-047644E293D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8973A20-5F55-4781-897C-047644E293D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{525CF898-1C59-4F6F-9DE7-CD768F710B2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{525CF898-1C59-4F6F-9DE7-CD768F710B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{525CF898-1C59-4F6F-9DE7-CD768F710B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{525CF898-1C59-4F6F-9DE7-CD768F710B2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F7BE54F-63F8-4431-9850-D376F0671861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F7BE54F-63F8-4431-9850-D376F0671861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F7BE54F-63F8-4431-9850-D376F0671861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F7BE54F-63F8-4431-9850-D376F0671861}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

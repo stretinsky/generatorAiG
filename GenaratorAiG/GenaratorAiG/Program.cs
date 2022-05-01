@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.IO;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace GenaratorAiG
 {
     internal static class Program
     {
+
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
