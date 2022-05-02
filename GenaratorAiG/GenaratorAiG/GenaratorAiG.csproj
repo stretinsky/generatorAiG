@@ -90,6 +90,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Tasks\Tasks.csproj">
+      <Project>{525cf898-1c59-4f6f-9de7-cd768f710b2d}</Project>
+      <Name>Tasks</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WpfControlLibrary1\WpfControlLibrary1.csproj">
       <Project>{4f7be54f-63f8-4431-9850-d376f0671861}</Project>
       <Name>WpfControlLibrary1</Name>
