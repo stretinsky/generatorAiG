@@ -81,5 +81,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tasks\AnalyticalGeometry\" />
+    <Folder Include="Tasks\Complex\" />
+    <Folder Include="Tasks\Determinants\" />
+    <Folder Include="Tasks\SLAE\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
