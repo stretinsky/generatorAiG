@@ -11,7 +11,7 @@ namespace WpfControlLibrary1
         {
             TexFormulaParser parser = new TexFormulaParser();
             TexFormula formula = parser.Parse(latex);
-            MemoryStream stream = new MemoryStream(formula.RenderToPng(25.0, 0, 0, "Arial"));
+            MemoryStream stream = new MemoryStream(formula.RenderToPng(18.0, 0, 0, "Arial"));
             return new Bitmap(stream);
         }
     }

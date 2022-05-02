@@ -5,13 +5,14 @@ using System.Drawing;
 using System;
 using System.Drawing.Imaging;
 using System.Drawing.Printing;
+using System.Numerics;
+using Tasks;
 
 namespace GenaratorAiG
 {
     public partial class Form1 : Form
     {
         private string latex = @"x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}";
-        
         public Form1()
         {
             InitializeComponent();
@@ -22,6 +23,8 @@ namespace GenaratorAiG
         {
             try
             {
+                //Task1_1_4 task1 = new Task1_1_4();
+                //latex = task1.GetTaskLatex()[0] + "\\\\" + task1.GetTaskLatex()[1] + "\\\\" + task1.AnswerLatex;
                 latex = richTextBox1.Text;
                 pictureBox1.Image = latexHandler.CreateLatexImage(latex);
             }
@@ -29,30 +32,6 @@ namespace GenaratorAiG
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private Stream streamToPrint;
-        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
-        {
-            Image image = Image.FromStream(streamToPrint);
-
-            int x = e.MarginBounds.X;
-            int y = e.MarginBounds.Y;
-
-            int width = image.Width;
-            int height = image.Height;
-            if ((width / e.MarginBounds.Width) > (height / e.MarginBounds.Height))
-            {
-                width = e.MarginBounds.Width;
-                height = image.Height * e.MarginBounds.Width / image.Width;
-            }
-            else
-            {
-                height = e.MarginBounds.Height;
-                width = image.Width * e.MarginBounds.Height / image.Height;
-            }
-            Rectangle destRect = new Rectangle(x, y, width, height);
-            e.Graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel);
         }
 
         [System.Runtime.InteropServices.DllImportAttribute("gdi32.dll")]
@@ -92,6 +71,30 @@ namespace GenaratorAiG
             //}
         }
 
+        private Stream streamToPrint;
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Image image = Image.FromStream(streamToPrint);
+
+            int x = e.MarginBounds.X;
+            int y = e.MarginBounds.Y;
+
+            int width = image.Width;
+            int height = image.Height;
+            if ((width / e.MarginBounds.Width) > (height / e.MarginBounds.Height))
+            {
+                width = e.MarginBounds.Width;
+                height = image.Height * e.MarginBounds.Width / image.Width;
+            }
+            else
+            {
+                height = e.MarginBounds.Height;
+                width = image.Width * e.MarginBounds.Height / image.Height;
+            }
+            Rectangle destRect = new Rectangle(x, y, width, height);
+            e.Graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel);
+        }
+
         public void StartPrint(Stream streamToPrint, string streamType)
         {
 
@@ -108,5 +111,6 @@ namespace GenaratorAiG
                 printDocument1.Print();
             }
         }
+
     }
 }
