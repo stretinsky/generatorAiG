@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\Complex\Task_13546.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -83,7 +84,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tasks\AnalyticalGeometry\" />
-    <Folder Include="Tasks\Complex\" />
     <Folder Include="Tasks\Determinants\" />
     <Folder Include="Tasks\SLAE\" />
   </ItemGroup>
