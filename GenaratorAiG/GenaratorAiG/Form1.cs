@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Numerics;
+using GenaratorAiG.Tasks.Complex;
+
 
 namespace GenaratorAiG
 {
@@ -16,7 +18,8 @@ namespace GenaratorAiG
         public Form1()
         {
             InitializeComponent();
-            
+            Task_13546 task = new Task_13546();
+            MessageBox.Show(task.GetCondition() + "\n" + task.GetAnswer());
         }
     }
 }
