@@ -10,13 +10,14 @@ namespace GenaratorAiG.Tasks.Complex
     {
         string description = "Решить уравнение:";
         System.Numerics.Complex complex;
-        int degree;
+        int degree, b;
         Random rnd = new Random();
 
         public Task_26()
         {
-            degree = rnd.Next(2, 6);
-            complex = new System.Numerics.Complex(1, 1);
+            degree = rnd.Next(2, 5);
+            b = rnd.Next(1, 5);
+            complex = new System.Numerics.Complex(b, 1);
 
             //Корень degree-степени
             complex = System.Numerics.Complex.Pow(complex, 1/degree);
@@ -28,11 +29,11 @@ namespace GenaratorAiG.Tasks.Complex
         }
         public string GetCondition()
         {
-            return $"$z^{degree}$ - 1 = {complex.Imaginary}";
+            return $"$z^{degree}$-{b}={complex.Imaginary}";
         }
         public string GetAnswer()
         {
-            return $"z = {complex}";
+            return $"z={complex}";
         }
     }
 }
