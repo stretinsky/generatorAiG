@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Numerics;
+using GenaratorAiG.Tasks.Complex;
 
 namespace GenaratorAiG
 {
@@ -16,6 +17,8 @@ namespace GenaratorAiG
         public Form1()
         {
             InitializeComponent();
+            Task_25 task25 = new Task_25();
+            MessageBox.Show($"{task25.GetCondition()}\n{ task25.GetAnswer()}");
             
         }
     }
