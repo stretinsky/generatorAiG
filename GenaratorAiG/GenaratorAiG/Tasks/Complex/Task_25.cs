@@ -30,12 +30,12 @@ namespace GenaratorAiG.Tasks.Complex
         }
         public string GetCondition()
         {
-            return $"$z^2$ + z * ({complex1.Real}+{complex1.Imaginary}i)+({complex2.Real}+{complex2.Imaginary}i) = 0";
+            return $"z^2 + z * ({complex1.Real}+{complex1.Imaginary}i)+({complex2.Real}+{complex2.Imaginary}i) = 0";
         }
         public string GetAnswer()
         {
-            return $"$z_1$ = \\frac{{({-complex1.Real}-{complex1.Imaginary}i)+$\\sqrt{discriminant}$}} {{{2}}} = {z_1}" +
-                $"\n$z_2$ = \\frac{{({-complex1.Real}-{complex1.Imaginary}i)-$\\sqrt{discriminant}$}} {{{2}}} = {z_2}";
+            return $"z_1 = \\frac{{({-complex1.Real}-{complex1.Imaginary}i)+$\\sqrt{discriminant}$}} {{{2}}} = {z_1}" +
+                $"\nz_2 = \\frac{{({-complex1.Real}-{complex1.Imaginary}i)-$\\sqrt{discriminant}$}} {{{2}}} = {z_2}";
         }
     }
 }

@@ -29,7 +29,7 @@ namespace GenaratorAiG.Tasks.Complex
         }
         public string GetCondition()
         {
-            return $"$z^{degree}$-{b}={complex.Imaginary}";
+            return $"z^{degree} - {b} = {complex.Imaginary}";
         }
         public string GetAnswer()
         {
