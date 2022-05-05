@@ -15,10 +15,10 @@ namespace GenaratorAiG.Tasks.Complex
         public Task_25()
         {
             //Можно убрать System.Numerics (у меня using не работал просто)
-            complex1 = new System.Numerics.Complex(rnd.Next(1,10), rnd.Next(1, 5));
-            complex2 = new System.Numerics.Complex(rnd.Next(1,10), rnd.Next(1, 5));
+            complex1 = new System.Numerics.Complex(rnd.Next(1,5), rnd.Next(1, 5));
+            complex2 = new System.Numerics.Complex(rnd.Next(1,5), rnd.Next(1, 5));
 
-            discriminant = System.Numerics.Complex.Sqrt(complex1 * complex1 - 4 * complex2);
+            discriminant = complex1 * complex1 - 4 * complex2;
 
             z_1 = (-complex1 + discriminant) / 2;
             z_2 = (-complex1 - discriminant) / 2;
@@ -30,12 +30,12 @@ namespace GenaratorAiG.Tasks.Complex
         }
         public string GetCondition()
         {
-            return $"$z^2$ + z * ({complex1.Real} + {complex1.Imaginary}) + ({complex2.Real} + {complex2.Imaginary}) = 0";
+            return $"$z^2$ + z * ({complex1.Real}+{complex1.Imaginary}i)+({complex2.Real}+{complex2.Imaginary}i) = 0";
         }
         public string GetAnswer()
         {
-            return $"$z_1$ = \\frac{{({-complex1.Real} - {complex1.Imaginary}) + {discriminant}}} {{{2}}} = {z_1}" +
-                $"\n$z_2$ = \\frac{{({-complex1.Real} - {complex1.Imaginary}) - {discriminant}}} {{{2}}} = {z_2}";
+            return $"$z_1$ = \\frac{{({-complex1.Real}-{complex1.Imaginary}i)+$\\sqrt{discriminant}$}} {{{2}}} = {z_1}" +
+                $"\n$z_2$ = \\frac{{({-complex1.Real}-{complex1.Imaginary}i)-$\\sqrt{discriminant}$}} {{{2}}} = {z_2}";
         }
     }
 }

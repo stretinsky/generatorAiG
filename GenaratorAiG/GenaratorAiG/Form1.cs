@@ -17,7 +17,7 @@ namespace GenaratorAiG
         public Form1()
         {
             InitializeComponent();
-            Task_25 task25 = new Task_25();
+            Task_26 task25 = new Task_26();
             MessageBox.Show($"{task25.GetCondition()}\n{ task25.GetAnswer()}");
             
         }
