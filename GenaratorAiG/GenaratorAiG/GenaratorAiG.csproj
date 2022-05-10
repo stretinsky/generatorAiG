@@ -58,6 +58,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\Complex\Task_25.cs" />
+    <Compile Include="Tasks\Complex\Task_26.cs" />
+    <Compile Include="Tasks\SLAE\Task_80.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -81,11 +84,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tasks\AnalyticalGeometry\" />
-    <Folder Include="Tasks\Complex\" />
-    <Folder Include="Tasks\Determinants\" />
-    <Folder Include="Tasks\SLAE\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
