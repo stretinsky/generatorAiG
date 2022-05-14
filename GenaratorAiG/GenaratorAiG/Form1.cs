@@ -7,15 +7,21 @@ using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.Numerics;
 using Tasks;
+using PdfSharp.Pdf;
+using PdfSharp;
+using TheArtOfDev.HtmlRenderer.PdfSharp;
 
 namespace GenaratorAiG
 {
     public partial class Form1 : Form
     {
         private string latex = @"x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}";
+        string html;
+        Random r;
         public Form1()
         {
             InitializeComponent();
+            r = new Random();
         }
 
         private LatexHandler latexHandler = new LatexHandler();
@@ -23,10 +29,19 @@ namespace GenaratorAiG
         {
             try
             {
-                //Task1_1_4 task1 = new Task1_1_4();
-                //latex = task1.GetTaskLatex()[0] + "\\\\" + task1.GetTaskLatex()[1] + "\\\\" + task1.AnswerLatex;
-                latex = richTextBox1.Text;
+                Task1_1_4 task1 = new Task1_1_4();
+                latex = task1.GetTaskLatex()[0] + "\\\\" + task1.GetTaskLatex()[1]; // + "\\\\" + task1.AnswerLatex;
+                //latex = richTextBox1.Text;
                 pictureBox1.Image = latexHandler.CreateLatexImage(latex);
+
+                int name = r.Next(100000, 999999);
+                pictureBox1.Image.Save($@"temp\{name}.jpeg");
+                
+                // TODO пропорционально регулировать изображение картинки, чтобы оно не вылазило за пределы pdf
+                html += $"<p>{task1.Description}</p>";
+                html += $"<p><img src = \"{Directory.GetCurrentDirectory() + $@"\temp\{name}.jpeg"}\";quality=96&amp;type=album\" alt = \"\" width=\"{pictureBox1.Image.Width}\" height=\"{pictureBox1.Image.Height}\"/>&nbsp;</p>";
+                PdfDocument pdf = PdfGenerator.GeneratePdf(html, PageSize.A4);
+                pdf.Save("document.pdf");
             }
             catch (Exception ex)
             {
