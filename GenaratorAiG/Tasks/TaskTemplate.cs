@@ -18,25 +18,35 @@ namespace Tasks
             return new List<string>(taskLatex);
         }
         public string AnswerLatex { get; protected set; }
-        protected string Expression(int coefficient, string variable)//лютый хардкод, если сможете сделать красивее - будет хорошо
+        protected string Expression(string rawEquation)
         {
-            if (coefficient == 0) return "";
-            if (variable.Equals("+") && coefficient > 0) return "+" + coefficient;
-            if (variable.Equals("+") && coefficient < 0) return coefficient.ToString();
-            if (coefficient == -1) return "-" + variable.Replace("+", "");
-            if (variable.Contains("+"))
+            bool hasStart = false;
+            string[] parts = rawEquation.Split('+');
+            StringBuilder equation = new StringBuilder();
+            foreach(string part in parts)
             {
-                variable = variable.Replace("+", "");
-                if (coefficient == 1) return "+" + variable;
-                if (coefficient > 0) return "+" + coefficient + variable;
-                return coefficient + variable;
+                if (part[0].Equals('0')) continue;
+                if (part[0].Equals('-'))
+                {
+                    hasStart = true;
+                    if (part[1].Equals('1') && part.Length > 2 && !"1234567890".Contains(part[2]))
+                        equation.Append("-" + part.Substring(2));
+                    else
+                        equation.Append("-" + part.Substring(1));
+                }
+                else
+                {
+                    if (hasStart)
+                        equation.Append('+');
+                    else 
+                        hasStart = true;
+                    if (part[0].Equals('1') && part.Length > 1 && !"1234567890".Contains(part[1]))
+                        equation.Append(part.Substring(1));
+                    else
+                        equation.Append(part);
+                }
             }
-            else
-            {
-                if (coefficient == 1) return variable;
-                if (coefficient > 0) return coefficient + variable;
-                return coefficient + variable;
-            }
+            return equation.ToString();
         }
     }
 }
