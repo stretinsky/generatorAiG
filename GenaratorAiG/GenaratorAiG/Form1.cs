@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Numerics;
+using Latex;
 
 namespace GenaratorAiG
 {
@@ -16,7 +16,6 @@ namespace GenaratorAiG
         public Form1()
         {
             InitializeComponent();
-            
         }
     }
 }
