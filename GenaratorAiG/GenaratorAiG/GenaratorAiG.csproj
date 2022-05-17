@@ -95,6 +95,10 @@
       <Project>{87828ae3-77be-409e-aef5-eee742320e10}</Project>
       <Name>Latex</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LinearAlgebraAndCo\LinearAlgebraAndCo.csproj">
+      <Project>{a9516b58-8b39-43b2-977c-8e27e12ec70e}</Project>
+      <Name>LinearAlgebraAndCo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

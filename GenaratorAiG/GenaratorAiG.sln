@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenaratorAiG", "GenaratorAi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Latex", "LatexImageBuilder\Latex.csproj", "{87828AE3-77BE-409E-AEF5-EEE742320E10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearAlgebraAndCo", "LinearAlgebraAndCo\LinearAlgebraAndCo.csproj", "{A9516B58-8B39-43B2-977C-8E27E12EC70E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{87828AE3-77BE-409E-AEF5-EEE742320E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87828AE3-77BE-409E-AEF5-EEE742320E10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87828AE3-77BE-409E-AEF5-EEE742320E10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9516B58-8B39-43B2-977C-8E27E12EC70E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9516B58-8B39-43B2-977C-8E27E12EC70E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9516B58-8B39-43B2-977C-8E27E12EC70E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9516B58-8B39-43B2-977C-8E27E12EC70E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
