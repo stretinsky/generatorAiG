@@ -7,6 +7,7 @@ using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.Numerics;
 using Tasks;
+using GenaratorAiG.SLAE;
 
 namespace GenaratorAiG
 {
@@ -21,17 +22,17 @@ namespace GenaratorAiG
         private LatexHandler latexHandler = new LatexHandler();
         private void GenerateImage(object sender, EventArgs e)
         {
-            try
-            {
-                //Task1_1_4 task1 = new Task1_1_4();
-                //latex = task1.GetTaskLatex()[0] + "\\\\" + task1.GetTaskLatex()[1] + "\\\\" + task1.AnswerLatex;
-                latex = richTextBox1.Text;
+            //try
+            //{
+                task_74 task1 = new task_74();
+                latex = task1.GetCondition() + "\\\\" + task1.GetAnswer();
+                //latex = richTextBox1.Text;
                 pictureBox1.Image = latexHandler.CreateLatexImage(latex);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         [System.Runtime.InteropServices.DllImportAttribute("gdi32.dll")]
