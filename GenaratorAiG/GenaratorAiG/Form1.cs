@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Latex;
+using GenaratorAiG.Tasks.SLAE;
 
 namespace GenaratorAiG
 {
@@ -21,16 +22,17 @@ namespace GenaratorAiG
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            try
-            {
-                string latex = @"\frac{2}{3}"; // здесь ваша латех формула  
+            //try
+            //{
+                task_87 task1 = new task_87();
+                string latex = task1.GetCondition() + "\\\\" + task1.GetAnswer(); // здесь ваша латех формула  
 
                 pictureBox1.Image = latexHandler.CreateLatexImage(latex);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
     }
 }
