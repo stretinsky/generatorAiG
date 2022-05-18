@@ -74,6 +74,7 @@
     <Compile Include="Tasks\SLAE\Task_74.cs" />
     <Compile Include="Tasks\SLAE\Task_76.cs" />
     <Compile Include="Tasks\SLAE\Task_80.cs" />
+    <Compile Include="Tasks\SLAE\task_87.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
