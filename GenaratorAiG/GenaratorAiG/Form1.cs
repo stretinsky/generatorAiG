@@ -30,19 +30,20 @@ namespace GenaratorAiG
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
+                Task_73 task1 = new Task_73();
            
-                string latex = @"\frac{23}{5}"; // здесь ваша латех формула  
+                string latex = task1.GetCondition() + "\\\\" + task1.GetAnswer(); // здесь ваша латех формула  
 
                 pictureBox1.Image = latexHandler.CreateLatexImage(latex);
 
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
         }
 
     }
