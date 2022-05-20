@@ -71,6 +71,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tasks\Complex\Task_19.cs" />
+    <Compile Include="Tasks\SLAE\Task_72.cs" />
     <Compile Include="Tasks\SLAE\Task_74.cs" />
     <Compile Include="Tasks\SLAE\Task_76.cs" />
     <Compile Include="Tasks\SLAE\Task_80.cs" />
