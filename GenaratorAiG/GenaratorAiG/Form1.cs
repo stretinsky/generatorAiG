@@ -32,8 +32,9 @@ namespace GenaratorAiG
         {
             try
             {
+                Task_89 task = new Task_89();
            
-                string latex = @"\frac{23}{5}"; // здесь ваша латех формула  
+                string latex = task.GetCondition() + "\\\\" + task.GetAnswer(); // здесь ваша латех формула  
 
                 pictureBox1.Image = latexHandler.CreateLatexImage(latex);
 
