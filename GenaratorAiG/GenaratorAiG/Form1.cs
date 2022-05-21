@@ -33,10 +33,10 @@ namespace GenaratorAiG
         {
             try
             {
-                Task_126 task_126 = new Task_126();
+                Task_5 task_5 = new Task_5();
 
 
-                string latex = task_126.GetCondition() + task_126.GetAnswer(); // здесь ваша латех формула  
+                string latex = task_5.GetCondition() + "\\:\\:\\:\\:" + task_5.GetAnswer(); // здесь ваша латех формула  
 
                 pictureBox1.Image = latexHandler.CreateLatexImage(latex);
 
