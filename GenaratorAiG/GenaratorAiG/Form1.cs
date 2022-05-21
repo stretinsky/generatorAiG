@@ -15,13 +15,13 @@ using TheArtOfDev.HtmlRenderer.PdfSharp;
 using GenaratorAiG.Tasks.SLAE;
 using GenaratorAiG.Tasks.Complex;
 using System.Threading;
+using GenaratorAiG.Tasks.AnalyticalGeometry;
 
 namespace GenaratorAiG
 {
     public partial class Form1 : Form
     {
         private LatexImageBuilder latexHandler = new LatexImageBuilder();
-
         public Form1()
         {
             InitializeComponent();
@@ -30,19 +30,20 @@ namespace GenaratorAiG
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
            
-                string latex = @"\frac{23}{5}"; // здесь ваша латех формула  
+                Task_117 task = new Task_117();
+                string latex = task.GetCondition() + "\\\\" + task.GetAnswer(); // здесь ваша латех формула  
 
                 pictureBox1.Image = latexHandler.CreateLatexImage(latex);
 
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
     }
