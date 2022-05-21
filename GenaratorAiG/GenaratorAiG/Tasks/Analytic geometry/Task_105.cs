@@ -24,11 +24,8 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             for (int i = 0; i < n; i++)
             {
                 Vector a = new Vector(0, 0, 0), b = new Vector(0, 0, 0);
-                while (a.ScalarProduct(a) == 0 || b.ScalarProduct(b) == 0)
-                {
-                    a = Vector.GenerateRandomVector(3, random, -10, 15);
-                    b = Vector.GenerateRandomVector(3, random, -10, 15);
-                }
+                a = Vector.GenerateRandomVector(3, random, -10, 15);
+                b = Vector.GenerateRandomVector(3, random, -10, 15);
                 latex += letters[i] + $")\\vec{{a}}=({a.Coordinates[0]}, {a.Coordinates[1]}, {a.Coordinates[2]})," +
                     $"\\vec{{b}}=({b.Coordinates[0]}, {b.Coordinates[1]}, {b.Coordinates[2]})\\\\";
                 double angle = 180 / Math.PI * Math.Acos(a.ScalarProduct(b) / Math.Sqrt(a.ScalarProduct(a)) / Math.Sqrt(b.ScalarProduct(b)));

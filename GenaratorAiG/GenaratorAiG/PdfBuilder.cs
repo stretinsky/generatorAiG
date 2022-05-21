@@ -34,7 +34,7 @@ namespace GenaratorAiG
                 {
                     Bitmap img = latexHandler.CreateLatexImage(latex[i]);
                     string imgDataURI = IronPdf.Imaging.ImageUtilities.ImageToDataUri(img);
-                    string imgHtml = string.Format("&nbsp<img src='{0}' width='{1}' height='{2}' align='bottom'>&nbsp;", imgDataURI, img.Width, img.Height);
+                    string imgHtml = string.Format("&nbsp<img src='{0}' width='{1}' height='{2}' align='absmiddle'>&nbsp;", imgDataURI, img.Width, img.Height);
                     img.Dispose();
                     html += imgHtml + splittedCondition[i + 1].Trim();
                 }
@@ -51,13 +51,13 @@ namespace GenaratorAiG
                 {
                     img = latexHandler.CreateLatexImage(latex[i]);
                     imgDataURI = IronPdf.Imaging.ImageUtilities.ImageToDataUri(img);
-                    imgHtml = string.Format("&nbsp<img src='{0}' width='{1}' height='{2}' align='bottom'>&nbsp;", imgDataURI, img.Width, img.Height);
+                    imgHtml = string.Format("&nbsp<img src='{0}' width='{1}' height='{2}' align='absmiddle'>&nbsp;", imgDataURI, img.Width, img.Height);
                     img.Dispose();
                     html += imgHtml + splittedCondition[i + 1].Trim();
                 }
                 img = latexHandler.CreateLatexImage(latex[latex.Length - 1]);
                 imgDataURI = IronPdf.Imaging.ImageUtilities.ImageToDataUri(img);
-                imgHtml = string.Format("&nbsp<img src='{0}' width='{1}' height='{2}' align='bottom'>&nbsp;", imgDataURI, img.Width, img.Height);
+                imgHtml = string.Format("&nbsp<img src='{0}' width='{1}' height='{2}' align='absmiddle'>&nbsp;", imgDataURI, img.Width, img.Height);
                 html += imgHtml;
                 html += "</p>";
             }

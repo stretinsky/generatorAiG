@@ -33,7 +33,7 @@ namespace GenaratorAiG
             try
             {
                 //Можете сразу посмотреть, как будет выглядеть ваше задание в pdf файле, он в дебаге - document.pdf
-                Task_105 task = new Task_105(2); //просто поменяйте таск на свой
+                Task_108 task = new Task_108(); //просто поменяйте таск на свой
                 pdf.HandleTask(task.GetDescription(), task.GetCondition().ToArray());
                 pdf.ShowAnswer(task.GetAnswer());
                 pdf.GeneratePdf();
