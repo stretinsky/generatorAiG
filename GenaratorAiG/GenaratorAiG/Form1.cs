@@ -14,6 +14,7 @@ using PdfSharp.Pdf;
 using TheArtOfDev.HtmlRenderer.PdfSharp;
 using GenaratorAiG.Tasks.SLAE;
 using GenaratorAiG.Tasks.Complex;
+using GenaratorAiG.Tasks.Analytic_geometry;
 using System.Threading;
 
 namespace GenaratorAiG
@@ -32,8 +33,10 @@ namespace GenaratorAiG
         {
             try
             {
-           
-                string latex = @"\frac{23}{5}"; // здесь ваша латех формула  
+                Task_126 task_126 = new Task_126();
+
+
+                string latex = task_126.GetCondition() + task_126.GetAnswer(); // здесь ваша латех формула  
 
                 pictureBox1.Image = latexHandler.CreateLatexImage(latex);
 
