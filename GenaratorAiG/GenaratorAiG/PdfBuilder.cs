@@ -64,6 +64,14 @@ namespace GenaratorAiG
             else
                 throw new Exception("Кол-во $ должно быть либо на одно 1 меньше, чем число латех форм, либо равно этому числу");
         }
+        public void ShowAnswer(string answer)
+        {
+            Bitmap img = latexHandler.CreateLatexImage(answer);
+            string imgDataURI = IronPdf.Imaging.ImageUtilities.ImageToDataUri(img);
+            string imgHtml = string.Format("<img src='{0}' width ='{1}' height='{2}'>", imgDataURI, img.Width, img.Height);
+            html += $"<p style='font-size:{fontSize};font-family:{font};'>{imgHtml}</p>";
+            img.Dispose();
+        }
         public void GeneratePdf()
         {
             var Renderer = new ChromePdfRenderer();

@@ -21,8 +21,7 @@ namespace GenaratorAiG
 {
     public partial class Form1 : Form
     {
-        private LatexImageBuilder latexHandler = new LatexImageBuilder();
-
+        private PdfBuilder pdf = new PdfBuilder();
         public Form1()
         {
             InitializeComponent();
@@ -33,14 +32,10 @@ namespace GenaratorAiG
         {
             try
             {
-                Task_126 task_126 = new Task_126();
-
-
-                string latex = task_126.GetCondition() + task_126.GetAnswer(); // здесь ваша латех формула  
-
-                pictureBox1.Image = latexHandler.CreateLatexImage(latex);
-
-
+                Task_104 task = new Task_104();
+                pdf.HandleTask(task.GetDescription(), task.GetCondition().ToArray());
+                pdf.ShowAnswer(task.GetAnswer());
+                pdf.GeneratePdf();
             }
             catch (Exception ex)
             {
