@@ -16,6 +16,7 @@ using GenaratorAiG.Tasks.SLAE;
 using GenaratorAiG.Tasks.Complex;
 using System.Threading;
 
+
 namespace GenaratorAiG
 {
     public partial class Form1 : Form
@@ -32,8 +33,8 @@ namespace GenaratorAiG
         {
             try
             {
-           
-                string latex = @"\frac{23}{5}"; // здесь ваша латех формула  
+                Task_37 task_37 = new Task_37();
+                string latex = task_37.GetCondition(); // здесь ваша латех формула  
 
                 pictureBox1.Image = latexHandler.CreateLatexImage(latex);
 
