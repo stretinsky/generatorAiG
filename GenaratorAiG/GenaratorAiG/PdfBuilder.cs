@@ -1,0 +1,75 @@
+﻿using System.Drawing;
+using IronPdf;
+using Latex;
+using System;
+
+namespace GenaratorAiG
+{
+    class PdfBuilder
+    {
+        private LatexImageBuilder latexHandler = new LatexImageBuilder();
+        private string html;
+        private double fontSize = 20;
+        private string font = "TimesNewRoman";
+
+        public void HandleTask(string condition, string[] latex)
+        {
+            int count = 0;
+            foreach (char c in condition)
+                if (c == '$') count++;
+            if (count == 0)
+            {
+                Bitmap img = latexHandler.CreateLatexImage(latex[0]);
+                string imgDataURI = IronPdf.Imaging.ImageUtilities.ImageToDataUri(img);
+                string imgHtml = string.Format("<img src='{0}' width ='{1}' height='{2}'>", imgDataURI, img.Width, img.Height);
+                html += $"<p style='font-size:{fontSize};font-family:{font};'>{condition} <br>{imgHtml}</p>";
+                img.Dispose();
+            }
+            else if (count == latex.Length)
+            {
+                condition = condition.Replace("\n", "<br>");
+                string[] splittedCondition = condition.Split('$');
+                html += $"<p style='font-size:{fontSize};font-family:{font};'> {splittedCondition[0]}";
+                for (int i = 0; i < count; i++)
+                {
+                    Bitmap img = latexHandler.CreateLatexImage(latex[i]);
+                    string imgDataURI = IronPdf.Imaging.ImageUtilities.ImageToDataUri(img);
+                    string imgHtml = string.Format("<img src='{0}' width='{1}' height='{2}' align='absmiddle'>&nbsp;", imgDataURI, img.Width, img.Height);
+                    img.Dispose();
+                    html += imgHtml + splittedCondition[i + 1];
+                }
+                html += "</p>";
+            }
+            else if (count + 1 == latex.Length)
+            {
+                condition = condition.Replace("\n", "<br>");
+                string[] splittedCondition = condition.Split('$');
+                html += $"<p style='font-size:{fontSize};font-family:{font};'> {splittedCondition[0]}";
+                Bitmap img;
+                string imgDataURI, imgHtml;
+                for (int i = 0; i < count; i++)
+                {
+                    img = latexHandler.CreateLatexImage(latex[i]);
+                    imgDataURI = IronPdf.Imaging.ImageUtilities.ImageToDataUri(img);
+                    imgHtml = string.Format("<img src='{0}' width='{1}' height='{2}' align='absmiddle'>&nbsp;", imgDataURI, img.Width, img.Height);
+                    img.Dispose();
+                    html += imgHtml + splittedCondition[i + 1];
+                }
+                img = latexHandler.CreateLatexImage(latex[latex.Length - 1]);
+                imgDataURI = IronPdf.Imaging.ImageUtilities.ImageToDataUri(img);
+                imgHtml = string.Format("<img src='{0}' width='{1}' height='{2}' align='absmiddle'>&nbsp;", imgDataURI, img.Width, img.Height);
+                html += imgHtml;
+                html += "</p>";
+            }
+            else
+                throw new Exception("Кол-во $ должно быть либо на одно 1 меньше, чем число латех форм, либо равно этому числу");
+        }
+        public void GeneratePdf()
+        {
+            var Renderer = new ChromePdfRenderer();
+            var pdf = Renderer.RenderHtmlAsPdf(html);
+            pdf.SaveAs("document.pdf");
+            pdf.Dispose();
+        }
+    }
+}
