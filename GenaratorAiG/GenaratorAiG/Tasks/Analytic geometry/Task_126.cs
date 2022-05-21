@@ -42,7 +42,7 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             h = D.y - A.y;
             i = D.z - A.z;
             //condition = $"\\pmatrix{{{a} & {b} & {c} \\\\ {d} & {e} & {f} \\\\ {g} & {h} & {i} }}";
-            condition = $"A({A.x},{A.y},{A.z}) \\: B({B.x},{B.y},{B.z}) \\: C({C.x},{C.y},{C.z}) \\: D({D.x},{D.y},{D.z}) \\:";
+            condition = $"A({A.x},{A.y},{A.z}), B({B.x},{B.y},{B.z}), C({C.x},{C.y},{C.z}), D({D.x},{D.y},{D.z}) \\\\";
             int det = a * e * i + g * b * f + d * h * c - c * e * g - d * b * i - h * a * f;
             if (det == 0)
                 answer = "YES";
