@@ -55,5 +55,14 @@ namespace GenaratorAiG.Tasks
             }
             return equation.ToString();
         }
+        protected string StringSqrt(int number)
+        {
+            double a = Math.Sqrt(number);
+            if ((int)a == a)
+            {
+                return ((int)Math.Sqrt(number)).ToString();
+            }
+            return $"\\sqrt{{{number}}}";
+        }
     }
 }

@@ -79,6 +79,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tasks\Analytic geometry\Task_104.cs" />
+    <Compile Include="Tasks\Analytic geometry\Task_105.cs" />
     <Compile Include="Tasks\Analytic geometry\Task_126.cs" />
     <Compile Include="Tasks\Complex\Task_19.cs" />
     <Compile Include="Tasks\Complex\Task_4.cs" />

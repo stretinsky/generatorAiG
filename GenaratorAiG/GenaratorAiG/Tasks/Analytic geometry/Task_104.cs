@@ -13,8 +13,8 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             Vector a = Vector.GenerateRandomVector(2, random, -5, 5), b = Vector.GenerateRandomVector(2, random, -5, 5);
             Vector c = a - b;
 
-            string condition = $"|\\vec{{a}}|=" + StringSqrt(a.ScalarProduct(a)) + $",|\\vec{{b}}|=" +
-                StringSqrt(b.ScalarProduct(b)) + $",|\\vec{{a}}-\\vec{{b}}|=" + StringSqrt(c.ScalarProduct(c));
+            string condition = "|\\vec{a}|=" + StringSqrt(a.ScalarProduct(a)) + ",|\\vec{b}|=" +
+                StringSqrt(b.ScalarProduct(b)) + ",|\\vec{a}-\\vec{b}|=" + StringSqrt(c.ScalarProduct(c));
             taskLatex.Add(condition);
 
             int[] pm = new int[] { -1, 1 };
@@ -26,15 +26,6 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             int answer = c0 * c2 * a.ScalarProduct(a) + c1 * c3 * b.ScalarProduct(b) + 
                 (c0 * c3 + c1 * c2) * a.ScalarProduct(b);
             AnswerLatex = answer.ToString();
-        }
-        private string StringSqrt(int number)
-        {
-            double a = Math.Sqrt(number);
-            if ((int)a == a)
-            {
-                return ((int)Math.Sqrt(number)).ToString();
-            }
-            return $"\\sqrt{{{number}}}";
         }
     }
 }
