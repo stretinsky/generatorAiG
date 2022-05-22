@@ -26,7 +26,7 @@ namespace LinearAlgebraAndCo
             } while (coords.All(s => s == 0));
             return new Vector(coords);
         }
-        public int ScalarProduct(Vector x) 
+        public int ScalarProduct(Vector x)
         {
             if (x.Coordinates.Length != Coordinates.Length)
             {
@@ -65,6 +65,19 @@ namespace LinearAlgebraAndCo
         public static Vector operator -(Vector a, Vector b)
         {
             return a + (-b);
+        }
+        public static Vector operator *(Vector a, Vector b)
+        {
+            if (a.Coordinates.Length == b.Coordinates.Length && a.Coordinates.Length == 3)
+            {
+                int[] newCoords = new int[a.Coordinates.Length];
+                newCoords[0] = a.Coordinates[1] * b.Coordinates[2] - a.Coordinates[2] * b.Coordinates[1];
+                newCoords[1] = a.Coordinates[2] * b.Coordinates[0] - a.Coordinates[0] * b.Coordinates[2];
+                newCoords[2] = a.Coordinates[0] * b.Coordinates[1] - a.Coordinates[1] * b.Coordinates[0];
+                return new Vector(newCoords);
+            }
+            else
+                throw new Exception("Размерность векторов должна равняться 3");
         }
     }
 }
