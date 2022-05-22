@@ -2,6 +2,7 @@
 using IronPdf;
 using Latex;
 using System;
+using System.Collections.Generic;
 
 namespace GenaratorAiG
 {
@@ -63,6 +64,14 @@ namespace GenaratorAiG
             }
             else
                 throw new Exception("Кол-во $ должно быть либо на одно 1 меньше, чем число латех форм, либо равно этому числу");
+        }
+        public void HandleTask(string condition, string latex)
+        {
+            HandleTask(condition, new string[] { latex });
+        }
+        public void HandleTask(string condition, List<string> latex)
+        {
+            HandleTask(condition, latex.ToArray());
         }
         public void ShowAnswer(string answer)
         {
