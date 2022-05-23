@@ -16,10 +16,11 @@ using GenaratorAiG.Tasks.SLAE;
 using GenaratorAiG.Tasks.Complex;
 using GenaratorAiG.Tasks.Analytic_geometry;
 using System.Threading;
+using Krypton.Toolkit;
 
 namespace GenaratorAiG
 {
-    public partial class Form1 : Form
+    public partial class Form1 : KryptonForm
     {
         private PdfBuilder pdf = new PdfBuilder();
         public Form1()
