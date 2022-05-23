@@ -38,6 +38,8 @@ namespace GenaratorAiG
                 pdf.HandleTask(task.GetDescription(), task.GetCondition());
                 pdf.ShowAnswer(task.GetAnswer());
                 pdf.GeneratePdf();
+
+                webBrowser1.DocumentText = pdf.GetHTML();
             }
             catch (Exception ex)
             {

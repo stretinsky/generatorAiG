@@ -88,5 +88,11 @@ namespace GenaratorAiG
             pdf.SaveAs("document.pdf");
             pdf.Dispose();
         }
+
+        public string GetHTML()
+        {
+            return html;
+        }
+
     }
 }
