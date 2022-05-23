@@ -16,6 +16,7 @@ using GenaratorAiG.Tasks.SLAE;
 using GenaratorAiG.Tasks.Complex;
 using GenaratorAiG.Tasks.Analytic_geometry;
 using System.Threading;
+using GenaratorAiG.Tasks.Determinants;
 
 namespace GenaratorAiG
 {
@@ -30,18 +31,18 @@ namespace GenaratorAiG
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 //Можете сразу посмотреть, как будет выглядеть ваше задание в pdf файле, он в дебаге - document.pdf
-                Task_119 task = new Task_119(); //просто поменяйте таск на свой
+                Task1_2_70 task = new Task1_2_70(); //просто поменяйте таск на свой
                 pdf.HandleTask(task.GetDescription(), task.GetCondition());
                 pdf.ShowAnswer(task.GetAnswer());
                 pdf.GeneratePdf();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
     }
