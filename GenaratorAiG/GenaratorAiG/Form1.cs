@@ -26,6 +26,7 @@ namespace GenaratorAiG
     {
         private PdfBuilder pdf = new PdfBuilder();
         string fileName;
+        byte count = 0;
         public Form1()
         {
             InitializeComponent();
@@ -175,9 +176,17 @@ namespace GenaratorAiG
             }
         }
 
-        private void VariousTextBox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void kryptonTreeView1_AfterCheck(object sender, TreeViewEventArgs e)
         {
-
+            if (e.Action != TreeViewAction.Unknown && e.Node.Checked)
+            {
+                count++;
+            }
+            else 
+            {
+                count--;
+            }
+            CounterLabel.Text = count.ToString();
         }
     }
 }
