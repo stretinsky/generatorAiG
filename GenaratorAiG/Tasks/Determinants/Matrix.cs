@@ -20,10 +20,14 @@ namespace Tasks.Determinants
                 }
             }
         }
+        private static Random random = new Random();
 
+        static Matrix()
+        {
+            random = new Random();
+        }
         public Matrix(int dimension, int maxNumber)
         {
-            Random random = new Random();
             matrix = new double[dimension][];
             this.dimension = dimension;
             for (int i = 0; i < matrix.Length; i++)

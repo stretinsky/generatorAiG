@@ -25,6 +25,8 @@ namespace GenaratorAiG
             {
                 var task1 = new Task1_2_70();
                 latex = task1.GetCondition() + '\n' + task1.GetAnswer();
+                var task2 = new Task1_2_70();
+                latex += '\n' + task2.GetCondition() + '\n' + task2.GetAnswer();
                 richTextBox1.Text = latex;
                 pictureBox1.Image = latexHandler.CreateLatexImage(latex);
             }
