@@ -10,11 +10,27 @@ namespace GenaratorAiG
     {
         private LatexImageBuilder latexHandler = new LatexImageBuilder();
         private string html;
+        private int number = 0, various = 0;
         private double fontSize = 20;
         private string font = "TimesNewRoman";
 
-        public void HandleTask(string condition, string[] latex)
+        public int Number
         {
+            get { return number; }
+            set { number = value; }
+        }
+        public int Various
+        {
+            get { return various; }
+            set { various = value; }
+        }
+
+        public void HandleTask(string conditionPre, string[] latex)
+        {
+            //Номер задания
+            number++;
+            string condition = number.ToString() + ". " + conditionPre;
+
             int count = 0;
             foreach (char c in condition)
                 if (c == '$') count++;
@@ -92,6 +108,16 @@ namespace GenaratorAiG
         public string GetHTML()
         {
             return html;
+        }
+
+        public void WriteVariant()
+        {
+            html += $"<center>Вариант {various}</center>";            
+        }
+
+        public void ClearHtml()
+        {
+            html = "";
         }
 
     }

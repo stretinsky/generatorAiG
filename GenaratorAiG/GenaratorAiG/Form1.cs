@@ -26,7 +26,7 @@ namespace GenaratorAiG
     {
         private PdfBuilder pdf = new PdfBuilder();
         string fileName;
-        byte count = 0;
+        byte counter = 0, variant;
         public Form1()
         {
             InitializeComponent();
@@ -35,24 +35,24 @@ namespace GenaratorAiG
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            try
-            {
-                ////Можете сразу посмотреть, как будет выглядеть ваше задание в pdf файле, он в дебаге - document.pdf
-                //Task_119 task = new Task_119(); //просто поменяйте таск на свой
-                //pdf.HandleTask(task.GetDescription(), task.GetCondition());
-                //pdf.ShowAnswer(task.GetAnswer());
-                ////pdf.GeneratePdf();
+            //try
+            //{
+            //    ////Можете сразу посмотреть, как будет выглядеть ваше задание в pdf файле, он в дебаге - document.pdf
+            //    //Task_119 task = new Task_119(); //просто поменяйте таск на свой
+            //    //pdf.HandleTask(task.GetDescription(), task.GetCondition());
+            //    //pdf.ShowAnswer(task.GetAnswer());
+            //    ////pdf.GeneratePdf();
 
-                WebBrowser.DocumentText = pdf.GetHTML();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //    WebBrowser.DocumentText = pdf.GetHTML();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
 
-            //Complex
-            kryptonTreeView1.Nodes[0].Nodes[1].Tag = new Task_19();
-            //дописать методы к таскам: 4
+            ////Complex
+            //kryptonTreeView1.Nodes[0].Nodes[1].Tag = new Task_19();
+            ////дописать методы к таскам: 4
 
 
             //Determinants
@@ -89,39 +89,37 @@ namespace GenaratorAiG
 
         private void GenerateButton_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 4; i++)
+            pdf.ClearHtml();
+            variant = Convert.ToByte(VariantTextBox.Text);
+            pdf.Various = 0;
+
+            for (int k = 0; k < variant; k++)
             {
-                foreach (TreeNode tr in kryptonTreeView1.Nodes[i].Nodes)
+                pdf.Number = 0;
+                pdf.Various++;
+                pdf.WriteVariant();
+
+                try
                 {
-                    if (tr.Checked)
+                    for (int i = 0; i < 4; i++)
                     {
-                        ITask task = tr.Tag as ITask;
-                        pdf.HandleTask(task.GetDescription(), task.GetCondition());
+                        foreach (TreeNode tr in kryptonTreeView1.Nodes[i].Nodes)
+                        {
+                            if (tr.Checked)
+                            {
+                                ITask task = tr.Tag as ITask;
+                                pdf.HandleTask(task.GetDescription(), task.GetCondition());
+                            }
+                        }
                     }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка");
                 }
             }
 
-
-            try
-            {
-                WebBrowser.DocumentText = pdf.GetHTML();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        public static Byte[] PdfSharpConvert(String html)
-        {
-            Byte[] res = null;
-            using (MemoryStream ms = new MemoryStream())
-            {
-                var pdf = PdfGenerator.GeneratePdf(html, PdfSharp.PageSize.A4);
-                pdf.Save(ms);
-                res = ms.ToArray();
-            }
-            return res;
+            WebBrowser.DocumentText = pdf.GetHTML();
         }
 
         private void DownloadButton_Click(object sender, EventArgs e)
@@ -180,13 +178,13 @@ namespace GenaratorAiG
         {
             if (e.Action != TreeViewAction.Unknown && e.Node.Checked)
             {
-                count++;
+                counter++;
             }
             else 
             {
-                count--;
+                counter--;
             }
-            CounterLabel.Text = count.ToString();
+            CounterLabel.Text = counter.ToString();
         }
     }
 }
