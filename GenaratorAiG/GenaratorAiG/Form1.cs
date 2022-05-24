@@ -31,18 +31,18 @@ namespace GenaratorAiG
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //try
-            //{
-                //Можете сразу посмотреть, как будет выглядеть ваше задание в pdf файле, он в дебаге - document.pdf
-                Task1_2_70 task = new Task1_2_70(); //просто поменяйте таск на свой
+            try
+            {
+                //Можете сразу посмотреть, как будет выглядеть ваше задание в pdf файле, он в дебаге -document.pdf
+                Task_158 task = new Task_158(); //просто поменяйте таск на свой
                 pdf.HandleTask(task.GetDescription(), task.GetCondition());
                 pdf.ShowAnswer(task.GetAnswer());
                 pdf.GeneratePdf();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
     }

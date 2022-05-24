@@ -87,6 +87,9 @@
     <Compile Include="Tasks\Analytic geometry\Task_125.cs" />
     <Compile Include="Tasks\Analytic geometry\Task_126.cs" />
     <Compile Include="Tasks\Analytic geometry\Task_152.cs" />
+    <Compile Include="Tasks\Analytic geometry\Task_156.cs" />
+    <Compile Include="Tasks\Analytic geometry\Task_157.cs" />
+    <Compile Include="Tasks\Analytic geometry\Task_158.cs" />
     <Compile Include="Tasks\Analytic geometry\Task_160.cs" />
     <Compile Include="Tasks\Complex\Task_19.cs" />
     <Compile Include="Tasks\Complex\Task_4.cs" />
