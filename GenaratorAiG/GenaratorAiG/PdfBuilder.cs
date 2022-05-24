@@ -81,11 +81,11 @@ namespace GenaratorAiG
             html += $"<p style='font-size:{fontSize};font-family:{font};'>{imgHtml}</p>";
             img.Dispose();
         }
-        public void GeneratePdf()
+        public void GeneratePdf(string path)
         {
             var Renderer = new ChromePdfRenderer();
             var pdf = Renderer.RenderHtmlAsPdf(html);
-            pdf.SaveAs("document.pdf");
+            pdf.SaveAs(path);
             pdf.Dispose();
         }
 
