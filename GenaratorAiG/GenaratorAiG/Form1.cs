@@ -47,5 +47,9 @@ namespace GenaratorAiG
             }
         }
 
+        private void GenerateButton_Click(object sender, EventArgs e)
+        {
+            Form1_Load(sender, e);
+        }
     }
 }
