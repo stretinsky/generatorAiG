@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenaratorAiG.Tasks.SLAE
 {
-    internal class Task_76
+    internal class Task_76: ITask
     {
         string description = "Найти матрицу A^n";
         int[,] matrix = new int[2, 2];

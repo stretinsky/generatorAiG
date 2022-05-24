@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenaratorAiG.Tasks.Determinants
 {
-    public class Task1_2_58
+    public class Task1_2_58: ITask
     {
         protected Matrix matrix { get; set; }
 

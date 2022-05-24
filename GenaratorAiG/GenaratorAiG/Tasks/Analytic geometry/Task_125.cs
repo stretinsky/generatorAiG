@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenaratorAiG.Tasks.Analytic_geometry
 {
-    internal class Task_125
+    internal class Task_125: ITask
     {
         string description = "Проверить, компланарны ли следующие вектора:";
         Random rnd = new Random();

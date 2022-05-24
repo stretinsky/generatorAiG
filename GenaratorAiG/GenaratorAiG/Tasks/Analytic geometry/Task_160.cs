@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenaratorAiG.Tasks.Analytic_geometry
 {
-    internal class Task_160
+    internal class Task_160: ITask
     {
         string description = "Найти расстояние:";
         int[] point = new int[3];
@@ -35,10 +35,9 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             return description;
         }
 
-        public string[] GetCondition()
+        public string GetCondition()
         {
-            string[] conditions = new string[1] { $"point ({point[0]};{point[1]};{point[2]})\\; to\\; flat\\; {a}x+{b}y+{c}z+{d}=0" };
-            return conditions;
+            return $"point ({point[0]};{point[1]};{point[2]})\\; to\\; flat\\; {a}x+{b}y+{c}z+{d}=0";
         }
 
         public string GetAnswer()

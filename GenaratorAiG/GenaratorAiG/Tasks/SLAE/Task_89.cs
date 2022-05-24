@@ -7,7 +7,7 @@ using Fractions;
 
 namespace GenaratorAiG.Tasks.SLAE
 {
-    class Task_89 : Task_88
+    class Task_89 : Task_88, ITask
     {
 
         public virtual string GetAnswer()

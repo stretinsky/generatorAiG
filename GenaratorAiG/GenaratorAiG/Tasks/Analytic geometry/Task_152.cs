@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenaratorAiG.Tasks.Analytic_geometry
 {
-    internal class Task_152
+    internal class Task_152: ITask
     {
         string description;
         int x, y, z, p;
@@ -37,15 +37,14 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             return description;
         }
 
-        public string[] GetCondition()
+        public string GetCondition()
         {
-            string[] condition = new string[1] { $"A({points[0, 0]};{points[0, 1]};{points[0, 2]}), \\;" +
+            return $"A({points[0, 0]};{points[0, 1]};{points[0, 2]}), \\;" +
                 $"B({points[1, 0]};{points[1, 1]};{points[1, 2]}), \\;" +
                 $"C({points[2, 0]};{points[2, 1]};{points[2, 2]}), \\;" +
                 $"D({points[3, 0]};{points[3, 1]};{points[3, 2]}), \\;" +
                 $"E({points[4, 0]};{points[4, 1]};{points[4, 2]}), \\;" +
-                $"F({points[5, 0]};{points[5, 1]};{points[5, 2]})" };
-            return condition;
+                $"F({points[5, 0]};{points[5, 1]};{points[5, 2]})";
         }
 
         public string GetAnswer()

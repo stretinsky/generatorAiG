@@ -7,7 +7,7 @@ using Fractions;
 
 namespace GenaratorAiG.Tasks.SLAE
 {
-    class Task_88
+    class Task_88: ITask
     {
         string description = "Решить систему уравнений матричным методом";
         Random rnd = new Random();

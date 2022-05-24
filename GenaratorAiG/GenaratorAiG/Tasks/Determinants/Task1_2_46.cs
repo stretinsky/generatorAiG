@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenaratorAiG.Tasks.Determinants
 {
-    public class Task1_2_46
+    public class Task1_2_46: ITask
     {
         private int[] permutations { get; set; }
         private int permutNumber

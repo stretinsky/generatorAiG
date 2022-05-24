@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenaratorAiG.Tasks.Analytic_geometry
 {
-    internal class Task_117
+    internal class Task_117: ITask
     {
         string description = "Найти векторное произведение векторов [a, b]"; //Над а и б вектора должны быть
         Random rnd = new Random();

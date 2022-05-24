@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenaratorAiG.Tasks.SLAE
 {
-    internal class Task_80
+    internal class Task_80: ITask
     {
         string description = "Найти обратную матрицу методом присоединённой матрицы";
         int[,] a = new int[3, 3], intermediate = new int[3, 3], reverse = new int[3, 3];

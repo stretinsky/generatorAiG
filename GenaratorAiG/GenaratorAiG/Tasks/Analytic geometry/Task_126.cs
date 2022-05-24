@@ -12,7 +12,7 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
         public int y;
         public int z;
     }
-    class Task_126
+    class Task_126: ITask
     {
         Point A, B, C, D;
         string desciption = "Проверить, что точки A, B, C, D лежат в одной плоскости", condition = "", answer = "";

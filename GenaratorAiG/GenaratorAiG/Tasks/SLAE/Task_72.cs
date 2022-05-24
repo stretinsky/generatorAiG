@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenaratorAiG.Tasks.SLAE
 {
-    internal class Task_72
+    internal class Task_72: ITask
     {
         string description = "Найти произведения матриц A * B и B * A:";
         Random rnd = new Random();

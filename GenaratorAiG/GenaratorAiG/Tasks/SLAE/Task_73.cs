@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenaratorAiG.Tasks.SLAE
 {
-    internal class Task_73
+    internal class Task_73: ITask
     {
         string description = "Найти линейные комбинации матрицы:";
         int[,] matrixA, matrixB, resultM;

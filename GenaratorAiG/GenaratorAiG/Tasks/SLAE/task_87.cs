@@ -7,7 +7,7 @@ using Fractions;
 
 namespace GenaratorAiG.Tasks.SLAE
 {
-    internal class Task_87
+    internal class Task_87: ITask
     {
         private string desciption = "Решить систему линейных уравнений с помощью правила Крамера:";
         int[] zero = new int[1] { 0 };
