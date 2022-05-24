@@ -35,11 +35,11 @@ namespace GenaratorAiG
         {
             try
             {
-                //Можете сразу посмотреть, как будет выглядеть ваше задание в pdf файле, он в дебаге - document.pdf
-                Task_119 task = new Task_119(); //просто поменяйте таск на свой
-                pdf.HandleTask(task.GetDescription(), task.GetCondition());
-                pdf.ShowAnswer(task.GetAnswer());
-                //pdf.GeneratePdf();
+                ////Можете сразу посмотреть, как будет выглядеть ваше задание в pdf файле, он в дебаге - document.pdf
+                //Task_119 task = new Task_119(); //просто поменяйте таск на свой
+                //pdf.HandleTask(task.GetDescription(), task.GetCondition());
+                //pdf.ShowAnswer(task.GetAnswer());
+                ////pdf.GeneratePdf();
 
                 WebBrowser.DocumentText = pdf.GetHTML();
             }
@@ -47,17 +47,28 @@ namespace GenaratorAiG
             {
                 MessageBox.Show(ex.Message);
             }
+
+            kryptonTreeView1.Nodes[0].Nodes[1].Tag = new Task_19();
+            kryptonTreeView1.Nodes[0].Nodes[1].Tag = new Task_19();
         }
 
         private void GenerateButton_Click(object sender, EventArgs e)
         {
+            List<string> themes = new List<string>();
+            foreach (TreeNode tr in kryptonTreeView1.Nodes[0].Nodes)
+            {
+                if (tr.Checked) 
+                {
+                    ITask task = tr.Tag as ITask;
+                    pdf.HandleTask(task.GetDescription(), task.GetCondition());
+                }
+            }
+
+
+
             try
             {
-                //Можете сразу посмотреть, как будет выглядеть ваше задание в pdf файле, он в дебаге - document.pdf
-                Task_119 task = new Task_119(); //просто поменяйте таск на свой
-                pdf.HandleTask(task.GetDescription(), task.GetCondition());
-                pdf.ShowAnswer(task.GetAnswer());
-                //pdf.GeneratePdf();
+               
 
                 WebBrowser.DocumentText = pdf.GetHTML();
             }

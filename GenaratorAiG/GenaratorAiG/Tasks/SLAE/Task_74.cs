@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenaratorAiG.Tasks.SLAE
 {
-    internal class Task_74
+    internal class Task_74: ITask
     {
         string description = "Найти произведения матриц A * A^T и A^T * A";
         int length, height;
