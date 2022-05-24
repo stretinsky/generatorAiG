@@ -25,6 +25,7 @@ namespace GenaratorAiG
     public partial class Form1 : KryptonForm
     {
         private PdfBuilder pdf = new PdfBuilder();
+        private PdfBuilder pdfAnswers = new PdfBuilder();
         string fileName;
         byte counter = 0, variant;
         public Form1()
@@ -90,14 +91,20 @@ namespace GenaratorAiG
         private void GenerateButton_Click(object sender, EventArgs e)
         {
             pdf.ClearHtml();
-            variant = Convert.ToByte(VariantTextBox.Text);
             pdf.Various = 0;
+            variant = Convert.ToByte(VariantTextBox.Text);
+            pdfAnswers.ClearHtml();
+            pdfAnswers.Various = 0;
 
             for (int k = 0; k < variant; k++)
             {
                 pdf.Number = 0;
                 pdf.Various++;
                 pdf.WriteVariant();
+
+                pdfAnswers.Number = 0;
+                pdfAnswers.Various++;
+                pdfAnswers.WriteVariant();
 
                 try
                 {
@@ -108,7 +115,9 @@ namespace GenaratorAiG
                             if (tr.Checked)
                             {
                                 ITask task = tr.Tag as ITask;
+
                                 pdf.HandleTask(task.GetDescription(), task.GetCondition());
+                                pdfAnswers.ShowAnswer(task.GetAnswer());
                             }
                         }
                     }
@@ -144,6 +153,19 @@ namespace GenaratorAiG
             }
 
             pdf.GeneratePdf(fileName);
+
+            string[] answers = fileName.Split('.');
+
+            string file = "";
+            for (int i = 0; i < answers.Length; i++)
+            {
+                if (i == answers.Length - 1)
+                    file += "_answer.";
+
+                file += answers[i];
+            }
+
+            pdfAnswers.GeneratePdf(file);
         }
 
         private void PrintButton_Click(object sender, EventArgs e)

@@ -89,8 +89,11 @@ namespace GenaratorAiG
         {
             HandleTask(condition, latex.ToArray());
         }
-        public void ShowAnswer(string answer)
+        public void ShowAnswer(string answerPre)
         {
+            number++;
+            string answer = number.ToString() + ". " + answerPre;
+
             Bitmap img = latexHandler.CreateLatexImage(answer);
             string imgDataURI = IronPdf.Imaging.ImageUtilities.ImageToDataUri(img);
             string imgHtml = string.Format("<img src='{0}' width ='{1}' height='{2}'>", imgDataURI, img.Width, img.Height);
