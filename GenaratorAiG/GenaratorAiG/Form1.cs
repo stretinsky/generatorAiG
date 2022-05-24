@@ -52,51 +52,13 @@ namespace GenaratorAiG
             //    MessageBox.Show(ex.Message);
             //}
 
-            ////Complex
-            kryptonTreeView1.Nodes[0].Nodes[1].Tag = new Task_19();
-            kryptonTreeView1.Nodes[0].Nodes[0].Tag = new Task_4();
-            ////дописать методы к таскам: 4
-
-
-            //Determinants
-            kryptonTreeView1.Nodes[1].Nodes[0].Tag = new Task1_2_46();
-            kryptonTreeView1.Nodes[1].Nodes[1].Tag = new Task1_2_58();
-            kryptonTreeView1.Nodes[1].Nodes[2].Tag = new Task1_2_60();
-            kryptonTreeView1.Nodes[1].Nodes[3].Tag = new Task1_2_67();
-            kryptonTreeView1.Nodes[1].Nodes[4].Tag = new Task1_2_68();
-            kryptonTreeView1.Nodes[1].Nodes[5].Tag = new Task1_2_69();
-            kryptonTreeView1.Nodes[1].Nodes[6].Tag = new Task1_2_70();
-
-
-            //SLAE
-            kryptonTreeView1.Nodes[2].Nodes[0].Tag = new Task_72();
-            kryptonTreeView1.Nodes[2].Nodes[1].Tag = new Task_73();
-            kryptonTreeView1.Nodes[2].Nodes[2].Tag = new Task_74();
-            kryptonTreeView1.Nodes[2].Nodes[3].Tag = new Task_76();
-            kryptonTreeView1.Nodes[2].Nodes[4].Tag = new Task_80();
-            kryptonTreeView1.Nodes[2].Nodes[5].Tag = new Task_82();
-            kryptonTreeView1.Nodes[2].Nodes[6].Tag = new Task_87();
-            kryptonTreeView1.Nodes[2].Nodes[7].Tag = new Task_88();
-            kryptonTreeView1.Nodes[2].Nodes[8].Tag = new Task_89();
-
-
-            //Analytical Geometry
-            kryptonTreeView1.Nodes[3].Nodes[0].Tag = new Task_104();
-            kryptonTreeView1.Nodes[3].Nodes[1].Tag = new Task_105();
-            kryptonTreeView1.Nodes[3].Nodes[2].Tag = new Task_108();
-            kryptonTreeView1.Nodes[3].Nodes[3].Tag = new Task_117();
-            kryptonTreeView1.Nodes[3].Nodes[4].Tag = new Task_118();
-            kryptonTreeView1.Nodes[3].Nodes[5].Tag = new Task_119();
-            kryptonTreeView1.Nodes[3].Nodes[6].Tag = new Task_125();
-            kryptonTreeView1.Nodes[3].Nodes[7].Tag = new Task_126();
-            kryptonTreeView1.Nodes[3].Nodes[8].Tag = new Task_152();
-            kryptonTreeView1.Nodes[3].Nodes[9].Tag = new Task_160();
-            //переписать методы к таскам: 104, 105, 108, 118, 119
-
         }
 
         private void GenerateButton_Click(object sender, EventArgs e)
         {
+            
+
+
             pdf.ClearHtml();
             pdf.Various = 0;
             variant = Convert.ToByte(VariantTextBox.Text);
@@ -105,6 +67,47 @@ namespace GenaratorAiG
 
             for (int k = 0; k < variant; k++)
             {
+                ////Complex
+                kryptonTreeView1.Nodes[0].Nodes[1].Tag = new Task_19();
+                kryptonTreeView1.Nodes[0].Nodes[0].Tag = new Task_4();
+                ////дописать методы к таскам: 4
+
+
+                //Determinants
+                kryptonTreeView1.Nodes[1].Nodes[0].Tag = new Task1_2_46();
+                kryptonTreeView1.Nodes[1].Nodes[1].Tag = new Task1_2_58();
+                kryptonTreeView1.Nodes[1].Nodes[2].Tag = new Task1_2_60();
+                kryptonTreeView1.Nodes[1].Nodes[3].Tag = new Task1_2_67();
+                kryptonTreeView1.Nodes[1].Nodes[4].Tag = new Task1_2_68();
+                kryptonTreeView1.Nodes[1].Nodes[5].Tag = new Task1_2_69();
+                kryptonTreeView1.Nodes[1].Nodes[6].Tag = new Task1_2_70();
+
+
+                //SLAE
+                kryptonTreeView1.Nodes[2].Nodes[0].Tag = new Task_72();
+                kryptonTreeView1.Nodes[2].Nodes[1].Tag = new Task_73();
+                kryptonTreeView1.Nodes[2].Nodes[2].Tag = new Task_74();
+                kryptonTreeView1.Nodes[2].Nodes[3].Tag = new Task_76();
+                kryptonTreeView1.Nodes[2].Nodes[4].Tag = new Task_80();
+                kryptonTreeView1.Nodes[2].Nodes[5].Tag = new Task_82();
+                kryptonTreeView1.Nodes[2].Nodes[6].Tag = new Task_87();
+                kryptonTreeView1.Nodes[2].Nodes[7].Tag = new Task_88();
+                kryptonTreeView1.Nodes[2].Nodes[8].Tag = new Task_89();
+
+
+                //Analytical Geometry
+                kryptonTreeView1.Nodes[3].Nodes[0].Tag = new Task_104();
+                kryptonTreeView1.Nodes[3].Nodes[1].Tag = new Task_105();
+                kryptonTreeView1.Nodes[3].Nodes[2].Tag = new Task_108();
+                kryptonTreeView1.Nodes[3].Nodes[3].Tag = new Task_117();
+                kryptonTreeView1.Nodes[3].Nodes[4].Tag = new Task_118();
+                kryptonTreeView1.Nodes[3].Nodes[5].Tag = new Task_119();
+                kryptonTreeView1.Nodes[3].Nodes[6].Tag = new Task_125();
+                kryptonTreeView1.Nodes[3].Nodes[7].Tag = new Task_126();
+                kryptonTreeView1.Nodes[3].Nodes[8].Tag = new Task_152();
+                kryptonTreeView1.Nodes[3].Nodes[9].Tag = new Task_160();
+                //переписать методы к таскам: 104, 105, 108, 118, 119
+
                 pdf.Number = 0;
                 pdf.Various++;
                 pdf.WriteVariant();
@@ -182,12 +185,6 @@ namespace GenaratorAiG
 
         private void kryptonTreeView1_AfterCheck(object sender, TreeViewEventArgs e)
         {
-            //if (kryptonTreeView1.Nodes[0].Checked)
-            //{
-            //    kryptonTreeView1.Nodes[0].Nodes[0].Checked = true;
-            //    kryptonTreeView1.Nodes[0].Nodes[1].Checked = true;
-            //    counter += 2;
-            //}
 
             if (e.Action != TreeViewAction.Unknown && e.Node.Checked)
             {
