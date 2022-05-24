@@ -12,6 +12,7 @@ using Latex;
 using PdfSharp;
 using PdfSharp.Pdf;
 using TheArtOfDev.HtmlRenderer.PdfSharp;
+using System.Drawing.Printing;
 using GenaratorAiG.Tasks.SLAE;
 using GenaratorAiG.Tasks.Complex;
 using GenaratorAiG.Tasks.Analytic_geometry;
@@ -176,34 +177,18 @@ namespace GenaratorAiG
 
         private void PrintButton_Click(object sender, EventArgs e)
         {
-
-            using (PrintDialog Dialog = new PrintDialog())
-            {
-                Dialog.ShowDialog();
-
-                ProcessStartInfo printProcessInfo = new ProcessStartInfo()
-                {
-                    Verb = "print",
-                    CreateNoWindow = true,
-                    FileName = fileName,
-                    WindowStyle = ProcessWindowStyle.Hidden
-                };
-
-                Process printProcess = new Process();
-                printProcess.StartInfo = printProcessInfo;
-                printProcess.Start();
-
-                printProcess.WaitForInputIdle();
-
-                if (false == printProcess.CloseMainWindow())
-                {
-                    printProcess.Kill();
-                }
-            }
+            WebBrowser.Print();
         }
 
         private void kryptonTreeView1_AfterCheck(object sender, TreeViewEventArgs e)
         {
+            //if (kryptonTreeView1.Nodes[0].Checked)
+            //{
+            //    kryptonTreeView1.Nodes[0].Nodes[0].Checked = true;
+            //    kryptonTreeView1.Nodes[0].Nodes[1].Checked = true;
+            //    counter += 2;
+            //}
+
             if (e.Action != TreeViewAction.Unknown && e.Node.Checked)
             {
                 counter++;

@@ -137,6 +137,7 @@ namespace GenaratorAiG
             // 
             // GenerateButton
             // 
+            this.GenerateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GenerateButton.Location = new System.Drawing.Point(255, 406);
             this.GenerateButton.Name = "GenerateButton";
             this.GenerateButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -197,6 +198,7 @@ namespace GenaratorAiG
             // 
             // DownloadButton
             // 
+            this.DownloadButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.DownloadButton.Location = new System.Drawing.Point(12, 406);
             this.DownloadButton.Name = "DownloadButton";
             this.DownloadButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -257,6 +259,7 @@ namespace GenaratorAiG
             // 
             // PrintButton
             // 
+            this.PrintButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.PrintButton.Location = new System.Drawing.Point(129, 406);
             this.PrintButton.Name = "PrintButton";
             this.PrintButton.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
@@ -376,6 +379,8 @@ namespace GenaratorAiG
             // 
             // kryptonTreeView1
             // 
+            this.kryptonTreeView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.kryptonTreeView1.CheckBoxes = true;
             this.kryptonTreeView1.Location = new System.Drawing.Point(12, 28);
             this.kryptonTreeView1.Name = "kryptonTreeView1";
@@ -481,6 +486,7 @@ namespace GenaratorAiG
             // 
             // VariousLabel
             // 
+            this.VariousLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.VariousLabel.AutoSize = true;
             this.VariousLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.VariousLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(144)))), ((int)(((byte)(254)))));
@@ -492,6 +498,7 @@ namespace GenaratorAiG
             // 
             // VariantTextBox
             // 
+            this.VariantTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.VariantTextBox.Location = new System.Drawing.Point(353, 365);
             this.VariantTextBox.Mask = "0";
             this.VariantTextBox.Name = "VariantTextBox";
@@ -506,6 +513,9 @@ namespace GenaratorAiG
             // 
             // WebBrowser
             // 
+            this.WebBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.WebBrowser.Location = new System.Drawing.Point(416, 9);
             this.WebBrowser.Name = "WebBrowser";
             this.WebBrowser.Size = new System.Drawing.Size(413, 440);
