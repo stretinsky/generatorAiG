@@ -52,7 +52,8 @@ namespace GenaratorAiG
             //}
 
             ////Complex
-            //kryptonTreeView1.Nodes[0].Nodes[1].Tag = new Task_19();
+            kryptonTreeView1.Nodes[0].Nodes[1].Tag = new Task_19();
+            kryptonTreeView1.Nodes[0].Nodes[0].Tag = new Task_4();
             ////дописать методы к таскам: 4
 
 
@@ -79,7 +80,12 @@ namespace GenaratorAiG
 
 
             //Analytical Geometry
+            kryptonTreeView1.Nodes[3].Nodes[0].Tag = new Task_104();
+            kryptonTreeView1.Nodes[3].Nodes[1].Tag = new Task_105();
+            kryptonTreeView1.Nodes[3].Nodes[2].Tag = new Task_108();
             kryptonTreeView1.Nodes[3].Nodes[3].Tag = new Task_117();
+            kryptonTreeView1.Nodes[3].Nodes[4].Tag = new Task_118();
+            kryptonTreeView1.Nodes[3].Nodes[5].Tag = new Task_119();
             kryptonTreeView1.Nodes[3].Nodes[6].Tag = new Task_125();
             kryptonTreeView1.Nodes[3].Nodes[7].Tag = new Task_126();
             kryptonTreeView1.Nodes[3].Nodes[8].Tag = new Task_152();

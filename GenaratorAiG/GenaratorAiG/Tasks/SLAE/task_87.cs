@@ -64,7 +64,7 @@ namespace GenaratorAiG.Tasks.SLAE
             return desciption;
         }
 
-        public string GetCondition()
+        public List<string> GetCondition()
         {
             //'-'"
             condition += "\\cases{";
@@ -85,7 +85,9 @@ namespace GenaratorAiG.Tasks.SLAE
 
             condition += "}";
 
-            return condition;
+            List<string> formules = new List<string>();
+            formules.Add(condition);
+            return formules;
         }
 
         public string GetAnswer()

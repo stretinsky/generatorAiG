@@ -32,11 +32,14 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             return description;
         }
 
-        public string GetCondition()
+        public List<string> GetCondition()
         {
-            return $"\\vec{{a}} = ({vectors[0, 0]}; {vectors[0, 1]}; {vectors[0, 2]}), \\; " +
+            string condition = $"\\vec{{a}} = ({vectors[0, 0]}; {vectors[0, 1]}; {vectors[0, 2]}), \\; " +
                 $"\\vec{{b}} = ({vectors[1, 0]}; {vectors[1, 1]}; {vectors[1, 2]}), \\; " +
                 $"\\vec{{c}} = ({vectors[2, 0]}; {vectors[2, 1]}; {vectors[2, 2]}) \\\\";
+            List<string> formules = new List<string>();
+            formules.Add(condition);
+            return formules;
         }
 
         public string GetAnswer()

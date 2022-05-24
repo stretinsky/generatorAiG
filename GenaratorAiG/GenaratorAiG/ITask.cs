@@ -10,7 +10,7 @@ namespace GenaratorAiG
     {
         string GetDescription();
 
-        string GetCondition();
+        List<string> GetCondition();
 
         string GetAnswer();
     }

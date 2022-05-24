@@ -36,10 +36,13 @@ namespace GenaratorAiG.Tasks.SLAE
         {
             return description;
         }
-        public string GetCondition()
+        public List<string> GetCondition()
         {
-            return $"\\pmatrix{{{matrix1[0, 0]} & {matrix1[0, 1]} \\\\ {matrix1[1, 0]} & {matrix1[1, 1]}}} X = " +
+            string condition = $"\\pmatrix{{{matrix1[0, 0]} & {matrix1[0, 1]} \\\\ {matrix1[1, 0]} & {matrix1[1, 1]}}} X = " +
                 $"\\pmatrix{{{matrix2[0, 0]} & {matrix2[0, 1]} \\\\ {matrix2[1, 0]} & {matrix2[1, 1]}}}";
+            List<string> formules = new List<string>();
+            formules.Add(condition);
+            return formules;
         }
         public string GetAnswer()
         {

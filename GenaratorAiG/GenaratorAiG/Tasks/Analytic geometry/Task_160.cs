@@ -35,9 +35,12 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             return description;
         }
 
-        public string GetCondition()
+        public List<string> GetCondition()
         {
-            return $"point ({point[0]};{point[1]};{point[2]})\\; to\\; flat\\; {a}x+{b}y+{c}z+{d}=0";
+            string condition = $"point ({point[0]};{point[1]};{point[2]})\\; to\\; flat\\; {a}x+{b}y+{c}z+{d}=0";
+            List<string> formules = new List<string>();
+            formules.Add(condition);
+            return formules;
         }
 
         public string GetAnswer()

@@ -38,7 +38,7 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             return description;
         }
 
-        public string GetCondition()
+        public List<string> GetCondition()
         {
             condition += $"\\vec{{a}} = {vectors[0, 0]}\\vec{{i}}";
 
@@ -62,7 +62,9 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             else
                 condition += $" {vectors[1, 1]}\\vec{{j}} ";
 
-            return condition;
+            List<string> formules = new List<string>();
+            formules.Add(condition);
+            return formules;
         }
 
         public string GetAnswer()

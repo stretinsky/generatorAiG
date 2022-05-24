@@ -52,8 +52,9 @@ namespace GenaratorAiG.Tasks.SLAE
         {
             return description;
         }
-        public string GetCondition()
+        public List<string> GetCondition()
         {
+            List<string> formules = new List<string>();
             switch (choice)
             {
                 case 0:
@@ -92,7 +93,8 @@ namespace GenaratorAiG.Tasks.SLAE
                         }
                         condition += "}, ";
 
-                        return condition;
+                        formules.Add(condition);
+                        return formules;
                     }
                 case 1:
                     {
@@ -114,7 +116,8 @@ namespace GenaratorAiG.Tasks.SLAE
                         }
                         condition += "}, ";
 
-                        return condition;
+                        formules.Add(condition);
+                        return formules;
                     }
                 case 2:
                     {
@@ -152,7 +155,8 @@ namespace GenaratorAiG.Tasks.SLAE
                         }
                         condition += "}, ";
 
-                        return condition;
+                        formules.Add(condition);
+                        return formules;
                     }
                 default:
                     {
@@ -160,8 +164,9 @@ namespace GenaratorAiG.Tasks.SLAE
                         break;
                     }
             }
-
-            return "Ошибка в методе GetCondition (Task_73)";
+            condition = "Ошибка в методе GetCondition (Task_73)";
+            formules.Add(condition);
+            return formules;
         }
         public string GetAnswer()
         {

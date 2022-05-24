@@ -61,11 +61,14 @@ namespace GenaratorAiG.Tasks.SLAE
             return description;
         }
 
-        public string GetCondition()
+        public List<string> GetCondition()
         {
-            return $"\\cases{{{slae[0, 0]}x_1 + {slae[0, 1]}x_2 + {slae[0, 2]}x_3 = {matrixX[0]} \\\\" +
+            string condition = $"\\cases{{{slae[0, 0]}x_1 + {slae[0, 1]}x_2 + {slae[0, 2]}x_3 = {matrixX[0]} \\\\" +
                 $"{slae[1, 0]}x_1 + {slae[1, 1]}x_2 + {slae[1, 2]}x_3 = {matrixX[1]} \\\\ " +
                 $"{slae[2, 0]}x_1 + {slae[2, 1]}x_2 + {slae[2, 2]}x_3 = {matrixX[2]}}}";
+            List<string> formules = new List<string>();
+            formules.Add(condition);
+            return formules;
         }
 
         public string GetAnswer()

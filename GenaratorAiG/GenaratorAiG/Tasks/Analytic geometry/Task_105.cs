@@ -19,6 +19,13 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             taskLatex.Add("\\vec{b}");
             GenerateTask(n);
         }
+        public Task_105()
+        {
+            Description = "Вычислить скалярное произведение векторов $ и $, заданных своими координатами, и углы между ними: ";
+            taskLatex.Add("\\vec{a}");
+            taskLatex.Add("\\vec{b}");
+            GenerateTask(3);
+        }
         public void GenerateTask(int n)
         {
             for (int i = 0; i < n; i++)

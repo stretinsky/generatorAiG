@@ -21,9 +21,12 @@ namespace GenaratorAiG.Tasks.Determinants
         {
             return "Вычислить определители второго порядка:";
         }
-        public string GetCondition()
+        public List<string> GetCondition()
         {
-            return matrix.GetLatex();
+            string condition = matrix.GetLatex();
+            List<string> formules = new List<string>();
+            formules.Add(condition);
+            return formules;
         }
         public string GetAnswer()
         {

@@ -55,7 +55,7 @@ namespace GenaratorAiG.Tasks.SLAE
         {
             return description;
         }
-        public string GetCondition()
+        public List<string> GetCondition()
         {
             condition += "\\pmatrix{";
             for (int i = 0; i < length; i++)
@@ -77,7 +77,9 @@ namespace GenaratorAiG.Tasks.SLAE
             }
             condition += "}";
 
-            return condition;
+            List<string> formules = new List<string>();
+            formules.Add(condition);
+            return formules;
         }
         public string GetAnswer()
         {

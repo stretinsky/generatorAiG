@@ -45,19 +45,23 @@ namespace GenaratorAiG.Tasks.SLAE
         {
             return description;
         }
-        public string GetCondition()
+        public List<string> GetCondition()
         {
+            string condition;
             if (choice == 0)
             {
-                return $"\\pmatrix{{{matrix[0, 0]} & {matrix[0, 1]} \\\\ {matrix[1, 0]} & {matrix[1, 1]}}}";
+                condition = $"\\pmatrix{{{matrix[0, 0]} & {matrix[0, 1]} \\\\ {matrix[1, 0]} & {matrix[1, 1]}}}";
             }
             else
             {
                 if (n == 1)
-                    return $"\\pmatrix{{cos(x) & sin(x) \\\\ -sin(x) & cos(x)}}";
+                    condition = $"\\pmatrix{{cos(x) & sin(x) \\\\ -sin(x) & cos(x)}}";
                 else
-                    return $"\\pmatrix{{cos({n}x) & sin({n}x) \\\\ -sin({n}x) & cos({n}x)}}";
+                    condition = $"\\pmatrix{{cos({n}x) & sin({n}x) \\\\ -sin({n}x) & cos({n}x)}}";
             }
+            List<string> formules = new List<string>();
+            formules.Add(condition);
+            return formules;
         }
         public string GetAnswer()
         {

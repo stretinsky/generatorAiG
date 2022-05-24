@@ -53,9 +53,12 @@ namespace GenaratorAiG.Tasks.Determinants
         {
             return "Определить число инверсий в перестановках";
         }
-        public string GetCondition()
+        public List<string> GetCondition()
         {
-            return string.Join(", ", permutations);
+            string condition = string.Join(", ", permutations);
+            List<string> formules = new List<string>();
+            formules.Add(condition);
+            return formules;
         }
         public string GetAnswer()
         {

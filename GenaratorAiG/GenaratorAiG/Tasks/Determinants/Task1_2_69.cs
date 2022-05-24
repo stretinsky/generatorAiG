@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenaratorAiG.Tasks.Determinants
 {
-    public class Task1_2_69 : Task1_2_58, ITask
+    public class Task1_2_69 : Task1_2_58
     {
         public Task1_2_69()
         {

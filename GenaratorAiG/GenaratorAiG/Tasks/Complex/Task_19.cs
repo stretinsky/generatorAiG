@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenaratorAiG.Tasks.Complex
 {
-    internal class Task_19
+    internal class Task_19 : ITask
     {
         string description = "Представить в показательной форме комплексное число:";
         private double a, b, r, f;
@@ -27,9 +27,12 @@ namespace GenaratorAiG.Tasks.Complex
         {
             return description;
         }
-        public string GetCondition()
+        public List<string> GetCondition()
         {
-            return $"{a} + {b}i";
+            string condition = $"{a} + {b}i";
+            List<string> formules = new List<string>();
+            formules.Add(condition);
+            return formules;
         }
         public string GetAnswer()
         {

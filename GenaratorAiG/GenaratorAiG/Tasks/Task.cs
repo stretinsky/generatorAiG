@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenaratorAiG.Tasks
 {
-    public class Task
+    public class Task : ITask
     {
         public string Description { get; protected set; }
         public string GetDescription()
