@@ -41,7 +41,7 @@ namespace GenaratorAiG
                 pdf.ShowAnswer(task.GetAnswer());
                 //pdf.GeneratePdf();
 
-                webBrowser1.DocumentText = pdf.GetHTML();
+                WebBrowser.DocumentText = pdf.GetHTML();
             }
             catch (Exception ex)
             {
@@ -59,7 +59,7 @@ namespace GenaratorAiG
                 pdf.ShowAnswer(task.GetAnswer());
                 //pdf.GeneratePdf();
 
-                webBrowser1.DocumentText = pdf.GetHTML();
+                WebBrowser.DocumentText = pdf.GetHTML();
             }
             catch (Exception ex)
             {
@@ -129,6 +129,11 @@ namespace GenaratorAiG
                     printProcess.Kill();
                 }
             }
+        }
+
+        private void VariousTextBox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }
