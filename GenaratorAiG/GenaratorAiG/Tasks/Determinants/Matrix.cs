@@ -39,7 +39,11 @@ namespace GenaratorAiG.Tasks.Determinants
         {
             double det = 1;
             const double EPS = 1E-9;
-            double[][] a = this.matrix.ToArray();
+            double[][] a = new double[dimension][];
+            for (int i = 0; i < matrix.Length; i++)
+            {
+                a[i] = matrix[i].ToArray();
+            }
             double[][] b = new double[1][];
             b[0] = new double[dimension];
             //проходим по строкам
