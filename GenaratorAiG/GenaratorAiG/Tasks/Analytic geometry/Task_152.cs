@@ -8,7 +8,6 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
         string description;
         int x, y, z, p;
         int[,] points = new int[6, 3];
-        string result, resultLATEX = "";
 
         public Task_152(Random rnd)
         {
@@ -48,8 +47,8 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
 
         public List<string> GetAnswer()
         {
-            result = "";
-            resultLATEX = "";
+            string result = "";
+            string resultLATEX = "";
             if (x * points[0, 0] - y * points[0, 1] + z * points[0, 2] + p == 0)
             {
                 result += $"A ПРОХОДИТ через плоскость, \\;";
