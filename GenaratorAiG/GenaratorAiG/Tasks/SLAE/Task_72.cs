@@ -53,6 +53,7 @@ namespace GenaratorAiG.Tasks.SLAE
 
         public List<string> GetCondition()
         {
+            condition = "";
             condition += $"A = \\pmatrix{{";
             for (int i = 0; i < n; i++)
             {
@@ -100,6 +101,7 @@ namespace GenaratorAiG.Tasks.SLAE
 
         public List<string> GetAnswer()
         {
+            result = "";
             result += $"A * B = \\pmatrix{{";
 
             for (int i = 0; i < resultAB.GetLength(0); i++)

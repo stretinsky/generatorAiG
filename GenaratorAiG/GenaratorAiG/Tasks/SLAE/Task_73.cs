@@ -54,6 +54,7 @@ namespace GenaratorAiG.Tasks.SLAE
         public List<string> GetCondition()
         {
             List<string> formules = new List<string>();
+            condition = "";
             switch (choice)
             {
                 case 0:
@@ -170,6 +171,7 @@ namespace GenaratorAiG.Tasks.SLAE
         public List<string> GetAnswer()
         {
             List<string> listResult = new List<string>();
+            result = "";
             switch (choice)
             {
                 case 0:

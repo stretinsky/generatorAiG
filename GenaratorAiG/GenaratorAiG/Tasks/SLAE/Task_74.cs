@@ -56,6 +56,7 @@ namespace GenaratorAiG.Tasks.SLAE
         }
         public List<string> GetCondition()
         {
+            condition = "";
             condition += "\\pmatrix{";
             for (int i = 0; i < length; i++)
             {
@@ -82,6 +83,7 @@ namespace GenaratorAiG.Tasks.SLAE
         }
         public List<string> GetAnswer()
         {
+            result = "";
             result += "A * A^T = \\pmatrix{";
             for (int i = 0; i < length; i++)
             {

@@ -65,7 +65,7 @@ namespace GenaratorAiG.Tasks.SLAE
 
         public List<string> GetCondition()
         {
-            //'-'"
+            condition = "";
             condition += "\\cases{";
 
             for (int i = 0; i < 3; i++)
@@ -91,6 +91,8 @@ namespace GenaratorAiG.Tasks.SLAE
 
         public List<string> GetAnswer()
         {
+            answer = "";
+
             Fraction fraction1 = new Fraction(determinant, determinant1);
             answer += $"x_1 = \\frac{{\\Delta_x_1}}{{\\Delta}} = \\frac{{{fraction1.Denominator}}}{{{fraction1.Numerator}}} \\\\";
 
