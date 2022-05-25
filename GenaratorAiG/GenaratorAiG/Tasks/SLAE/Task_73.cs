@@ -167,8 +167,9 @@ namespace GenaratorAiG.Tasks.SLAE
             formules.Add(condition);
             return formules;
         }
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
+            List<string> listResult = new List<string>();
             switch (choice)
             {
                 case 0:
@@ -204,7 +205,8 @@ namespace GenaratorAiG.Tasks.SLAE
                         }
                         result += "}";
 
-                        return result;
+                        listResult.Add(result);
+                        return listResult;
                     }
                 case 1:
                     {
@@ -239,7 +241,8 @@ namespace GenaratorAiG.Tasks.SLAE
                         }
                         result += "}";
 
-                        return result;
+                        listResult.Add(result);
+                        return listResult;
                     }
                 case 2:
                     {
@@ -271,7 +274,8 @@ namespace GenaratorAiG.Tasks.SLAE
                         }
                         result += "}";
 
-                        return result;
+                        listResult.Add(result);
+                        return listResult;
                     }
                 default:
                     {
@@ -280,7 +284,8 @@ namespace GenaratorAiG.Tasks.SLAE
                     }
             }
 
-            return "Ошибка в методе GetAnswer (Task_73)";
+            listResult.Add("Ошибка в методе GetAnswer (Task_73)");
+            return listResult;
         }
     }
 }

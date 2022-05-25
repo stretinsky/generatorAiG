@@ -61,28 +61,27 @@ namespace GenaratorAiG.Tasks.SLAE
             formules.Add(condition);
             return formules;
         }
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
-            switch (choice)
+            string result="";
+            if (choice == 0)
             {
-                case 0:
-                    {
-                        if (n == 1)
-                            return $"A^n = \\pmatrix{{{matrix[0, 0]} & n \\\\ {matrix[1, 0]} & {matrix[1, 1]}}}";
-                        else
-                            return $"A^n = \\pmatrix{{{matrix[0, 0]} & {matrix[0, 1]}n \\\\ {matrix[1, 0]} & {matrix[1, 1]}}}";
-
-                    }
-                case 1:
-                    {
-                        if (n == 1)
-                            return $"A^n = \\pmatrix{{cos(nx) & sin(nx) \\\\ -sin(nx) & cos(nx)}}";
-                        else
-                            return $"A^n = \\pmatrix{{cos(n{n}x) & sin(n{n}x) \\\\ -sin(n{n}x) & cos(n{n}x)}}";
-                    }
+                if (n == 1)
+                    result = $"A^n = \\pmatrix{{{matrix[0, 0]} & n \\\\ {matrix[1, 0]} & {matrix[1, 1]}}}";
+                else
+                    result = $"A^n = \\pmatrix{{{matrix[0, 0]} & {matrix[0, 1]}n \\\\ {matrix[1, 0]} & {matrix[1, 1]}}}";
+            }
+            else if (choice == 1)
+            {
+                if (n == 1)
+                    result = $"A^n = \\pmatrix{{cos(nx) & sin(nx) \\\\ -sin(nx) & cos(nx)}}";
+                else
+                    result = $"A^n = \\pmatrix{{cos(n{n}x) & sin(n{n}x) \\\\ -sin(n{n}x) & cos(n{n}x)}}";
             }
 
-            return null;
+            List<string> listResult = new List<string>();
+            listResult.Add(result);
+            return listResult;
         }
     }
 }

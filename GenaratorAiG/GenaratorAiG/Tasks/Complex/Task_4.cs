@@ -11,7 +11,7 @@ namespace GenaratorAiG.Tasks.Complex
 
             int x1 = random.Next(-10, 10), x2 = random.Next(-10, 10),
                 y1 = random.Next(-10, 10), y2 = random.Next(-10, 10);
-            AnswerLatex = $"a)\\;\\;\\;(x={x1},{x2};y={y1},{y2})";
+            answerLatex.Add($"a)\\;\\;\\;(x={x1},{x2};y={y1},{y2})");
 
             Polynomial real = new Polynomial();
             real.SetRoots(x1, x2);
@@ -29,7 +29,7 @@ namespace GenaratorAiG.Tasks.Complex
 
             x1 = random.Next(-10, 10); x2 = random.Next(-10, 10);
             y1 = random.Next(-10, 10); y2 = random.Next(-10, 10);
-            AnswerLatex += $"\\;\\;\\;\\;\\;b)\\;\\;\\;(x={x1},{x2};y={y1},{y2})";
+            answerLatex.Add($"b)\\;\\;\\;(x={x1},{x2};y={y1},{y2})");
 
             real = new Polynomial();
             real.SetRoots(x1, x2);

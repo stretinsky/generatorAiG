@@ -14,14 +14,14 @@ namespace GenaratorAiG.Tasks
             return Description;
         }
         protected List<string> taskLatex = new List<string>();
+        protected List<string> answerLatex = new List<string>();
         public List<string> GetCondition()
         {
             return new List<string>(taskLatex);
         }
-        public string AnswerLatex { get; protected set; }
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
-            return AnswerLatex;
+            return new List<string>(answerLatex);
         }
 
         protected string Expression(string rawEquation)

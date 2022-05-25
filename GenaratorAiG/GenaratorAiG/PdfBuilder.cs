@@ -8,12 +8,17 @@ namespace GenaratorAiG
 {
     class PdfBuilder
     {
-        private LatexImageBuilder latexHandler = new LatexImageBuilder();
+        private LatexImageBuilder latexHandler;
         private string html;
         private int number = 0, various = 0;
         private double fontSize = 20;
         private string font = "TimesNewRoman";
         private bool answer = false;
+
+        public PdfBuilder(LatexImageBuilder lim)
+        {
+            latexHandler = lim;
+        }
 
         public int Number
         {
@@ -96,18 +101,31 @@ namespace GenaratorAiG
         {
             HandleTask(condition, latex.ToArray());
         }
-        public void ShowAnswer(string answerPre, bool increment = true)
+        public void ShowAnswer(string[] answerFormules, bool increment = true)
         {
-            if (increment) number++;
-            string answer;
-            if (increment) answer = number.ToString() + ". " + answerPre;
-            else answer = answerPre;
-
-            Bitmap img = latexHandler.CreateLatexImage(answer);
-            string imgDataURI = IronPdf.Imaging.ImageUtilities.ImageToDataUri(img);
-            string imgHtml = string.Format("<img src='{0}' width ='{1}' height='{2}'>", imgDataURI, img.Width, img.Height);
-            html += $"<p style='font-size:{fontSize};font-family:{font};'>Ответ:{imgHtml}</p>";
+            string answer = "";
+            if (increment)
+            {
+                number++;
+                answer = number.ToString() + ". ";
+            }
+            Bitmap img = null;
+            string imgDataURI;
+            string imgHtml;
+            html += $"<p style='font-size:{fontSize};font-family:{font};'>Ответ:";
+            foreach (string formule in answerFormules)
+            {
+                img = latexHandler.CreateLatexImage(answer + formule);
+                imgDataURI = IronPdf.Imaging.ImageUtilities.ImageToDataUri(img);
+                imgHtml = string.Format("<img src='{0}' width ='{1}' height='{2}'>", imgDataURI, img.Width, img.Height);
+                html += "&nbsp;" + imgHtml;
+            }
+            html += "</p>";
             img.Dispose();
+        }
+        public void ShowAnswer(List<string> answerFormules, bool increment = true)
+        {
+            ShowAnswer(answerFormules.ToArray(), increment);
         }
         public void GeneratePdf(string path)
         {

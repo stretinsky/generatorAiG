@@ -66,7 +66,7 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             return formules;
         }
 
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
             result += $"\\vec{{ab}} = ";
             result += "\\pmatrix{ \\vec{i} & \\vec{j} & \\vec{k} \\\\" +
@@ -84,7 +84,9 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             else if (answer[2] < 0)
                 result += $" {answer[2]}\\vec{{k}}";
 
-            return result;
+            List<string> listResult = new List<string>();
+            listResult.Add(result);
+            return listResult;
         }
 
     }

@@ -12,6 +12,6 @@ namespace GenaratorAiG
 
         List<string> GetCondition();
 
-        string GetAnswer();
+        List<string> GetAnswer();
     }
 }

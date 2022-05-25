@@ -42,12 +42,14 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             return formules;
         }
 
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
+            List<string> result = new List<string>();
             if (determinant == 0)
-                return $"No, \\Delta = {determinant}"; //todo (Localization)
+                result.Add($"No, \\Delta = {determinant}"); //todo (Localization)
             else
-                return $"Yes, \\Delta = {determinant}"; //todo (Localization)
+                result.Add($"Yes, \\Delta = {determinant}"); //todo (Localization)
+            return result;
         }
     }
 }

@@ -43,12 +43,16 @@ namespace GenaratorAiG.Tasks.SLAE
             formules.Add(condition);
             return formules;
         }
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
+            string answer;
             if (det == 1)
-                return $"\\pmatrix{{{result[0, 0]} & {result[0, 1]} \\\\ {result[1, 0]} & {result[1, 1]}}}";
+                answer = $"\\pmatrix{{{result[0, 0]} & {result[0, 1]} \\\\ {result[1, 0]} & {result[1, 1]}}}";
             else
-                return $"\\frac{{1}}{{{det}}}\\pmatrix{{{result[0, 0]} & {result[0, 1]} \\\\ {result[1, 0]} & {result[1, 1]}}}";
+                answer = $"\\frac{{1}}{{{det}}}\\pmatrix{{{result[0, 0]} & {result[0, 1]} \\\\ {result[1, 0]} & {result[1, 1]}}}";
+            List<string> listResult = new List<string>();
+            listResult.Add(answer);
+            return listResult;
         }
 
         public void GenerateMatrix(Random random)

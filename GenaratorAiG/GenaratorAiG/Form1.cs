@@ -25,15 +25,18 @@ namespace GenaratorAiG
 {
     public partial class Form1 : KryptonForm
     {
-        private PdfBuilder pdf = new PdfBuilder();
-        private PdfBuilder pdfAnswers = new PdfBuilder();
-        private PdfBuilder resultPdf = new PdfBuilder();
+        private LatexImageBuilder latexHandler = new LatexImageBuilder();
+        private PdfBuilder pdf;
+        private PdfBuilder pdfAnswers;
+        private PdfBuilder resultPdf;
         string fileName;
         int variant;
         public Form1()
         {
             InitializeComponent();
-            
+            pdf = new PdfBuilder(latexHandler);
+            pdfAnswers = new PdfBuilder(latexHandler);
+            resultPdf = new PdfBuilder(latexHandler);
         }
 
         private void Form1_Load(object sender, EventArgs e)

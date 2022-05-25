@@ -27,9 +27,11 @@ namespace GenaratorAiG.Tasks.Determinants
             formules.Add(condition);
             return formules;
         }
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
-            return matrix.GetDeterminant().ToString();
+            List<string> listResult = new List<string>();
+            listResult.Add(matrix.GetDeterminant().ToString());
+            return listResult;
         }
     }
 }

@@ -43,22 +43,25 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             return formules;
         }
 
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
             double between = Math.Sqrt(sqrt);
-
+            string result;
             if (Convert.ToInt32(between) == Math.Truncate(between) && (numerator / between) == Math.Truncate(numerator / between))
             {
-                return $"{numerator / between}";
+                result = $"{numerator / between}";
             }
             else if (between == Math.Truncate(between))
             {
-                return $"\\frac{{{numerator}}}{{{between}}}";
+                result = $"\\frac{{{numerator}}}{{{between}}}";
             }
             else
             {
-                return $"\\frac{{{numerator}}}{{ \\sqrt{{{sqrt}}} }}";
+                result = $"\\frac{{{numerator}}}{{ \\sqrt{{{sqrt}}} }}";
             }
+            List<string> listResult = new List<string>();
+            listResult.Add(result);
+            return listResult;
         }
     }
 }

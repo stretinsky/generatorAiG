@@ -89,7 +89,7 @@ namespace GenaratorAiG.Tasks.SLAE
             return formules;
         }
 
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
             Fraction fraction1 = new Fraction(determinant, determinant1);
             answer += $"x_1 = \\frac{{\\Delta_x_1}}{{\\Delta}} = \\frac{{{fraction1.Denominator}}}{{{fraction1.Numerator}}} \\\\";
@@ -100,7 +100,9 @@ namespace GenaratorAiG.Tasks.SLAE
             Fraction fraction3 = new Fraction(determinant, determinant3);
             answer += $"x_1 = \\frac{{\\Delta_x_1}}{{\\Delta}} = \\frac{{{fraction3.Denominator}}}{{{fraction3.Numerator}}} \\\\";
 
-            return answer;
+            List<string> listResult = new List<string>();
+            listResult.Add(answer);
+            return listResult;
         }
     }
 }

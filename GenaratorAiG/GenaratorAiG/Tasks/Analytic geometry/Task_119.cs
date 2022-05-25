@@ -27,8 +27,7 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             Vector A = AminC + C, B = BminC + C, product = AminC * BminC;
             string area = "S=\\frac{" + StringSqrt(product.ScalarProduct(product)) + "}{2}";
             string height = "H=\\frac{" + StringSqrt(product.ScalarProduct(product)) + "}{" + StringSqrt((A - B).ScalarProduct(A - B)) + "}";
-            AnswerLatex += "a)" + area + ",";
-            AnswerLatex += height + "\\\\";
+            answerLatex.Add("a)" + area + "," + height);
             taskLatex.Add($"A\\left({A.Coordinates[0]},{A.Coordinates[1]},{A.Coordinates[2]}\\right)");
             taskLatex.Add($"B\\left({B.Coordinates[0]},{B.Coordinates[1]},{B.Coordinates[2]}\\right)");
             taskLatex.Add($"C\\left({C.Coordinates[0]},{C.Coordinates[1]},{C.Coordinates[2]}\\right)");
@@ -42,9 +41,9 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             taskLatex.Add($"\\vec{{a}}=\\left({A.Coordinates[0]},{A.Coordinates[1]},{A.Coordinates[2]}\\right)");
             taskLatex.Add($"\\vec{{b}}=\\left({B.Coordinates[0]},{B.Coordinates[1]},{B.Coordinates[2]}\\right)");
             product = A * B;
-            AnswerLatex += $"b)\\left[\\vec{{a}},\\vec{{b}}\\right]=\\left({product.Coordinates[0]},{product.Coordinates[1]},{product.Coordinates[2]}\\right)," +
+            answerLatex.Add($"b)\\left[\\vec{{a}},\\vec{{b}}\\right]=\\left({product.Coordinates[0]},{product.Coordinates[1]},{product.Coordinates[2]}\\right);" +
                 $"\\sin{{\\alpha}}=\\frac{{{StringSqrt(product.ScalarProduct(product))}}}{{{StringSqrt(A.ScalarProduct(A))}*{StringSqrt(B.ScalarProduct(B))}}}\\approx {Math.Round(Math.Sqrt((float)product.ScalarProduct(product) / A.ScalarProduct(A) / B.ScalarProduct(B)), 5)}" +
-                $";S={StringSqrt(product.ScalarProduct(product))}\\approx {Math.Round(Math.Sqrt(product.ScalarProduct(product)), 5)}";
+                $";S={StringSqrt(product.ScalarProduct(product))}\\approx {Math.Round(Math.Sqrt(product.ScalarProduct(product)), 5)}");
         }
     }
 }

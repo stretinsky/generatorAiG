@@ -33,9 +33,12 @@ namespace GenaratorAiG.Tasks.Complex
             formules.Add(condition);
             return formules;
         }
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
-            return $"{r}e^{{\\frac{{\\pi}}{{{index + 1}}}i}}";
+            string result = $"{r}e^{{\\frac{{\\pi}}{{{index + 1}}}i}}";
+            List<string> listResult = new List<string>();
+            listResult.Add(result);
+            return listResult;
         }
     }
 }

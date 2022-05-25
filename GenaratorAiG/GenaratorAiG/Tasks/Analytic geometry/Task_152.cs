@@ -49,7 +49,7 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             return formules;
         }
 
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
             if (x * points[0, 0] - y * points[0, 1] + z * points[0, 2] + p == 0)
             {
@@ -116,8 +116,9 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
                 result += $"F НЕ ПРОХОДИТ через плоскость, \\;";
                 resultLATEX += "F: NO";
             }
-
-            return resultLATEX;
+            List<string> listResult = new List<string>();
+            listResult.Add(resultLATEX);
+            return listResult;
         }
     }
 }

@@ -59,9 +59,11 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             formules.Add(condition);
             return formules;
         }
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
-            return answer;
+            List<string> result = new List<string>();
+            result.Add(answer);
+            return result;
         }
     }
 }

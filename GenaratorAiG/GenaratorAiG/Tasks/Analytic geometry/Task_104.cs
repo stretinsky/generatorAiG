@@ -24,7 +24,7 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             taskLatex.Add(question);
             int answer = c0 * c2 * a.ScalarProduct(a) + c1 * c3 * b.ScalarProduct(b) + 
                 (c0 * c3 + c1 * c2) * a.ScalarProduct(b);
-            AnswerLatex = answer.ToString();
+            answerLatex.Add(answer.ToString());
         }
     }
 }

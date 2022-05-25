@@ -65,11 +65,14 @@ namespace GenaratorAiG.Tasks.SLAE
             formules.Add(condition);
             return formules;
         }
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
-            return $"\\frac{{1}}{{{determinant}}} \\pmatrix{{{reverse[0, 0]} & {reverse[0, 1]} & {reverse[0, 2]} " +
+            string result = $"\\frac{{1}}{{{determinant}}} \\pmatrix{{{reverse[0, 0]} & {reverse[0, 1]} & {reverse[0, 2]} " +
                 $"\\\\ {reverse[1, 0]} & {reverse[1, 1]} & {reverse[1, 2]} " +
                 $"\\\\ {reverse[2, 0]} & {reverse[2, 1]} & {reverse[2, 2]}}}";
+            List<string> listResult = new List<string>();
+            listResult.Add(result);
+            return listResult;
         }
 
         public void CreateMatrix(Random random)

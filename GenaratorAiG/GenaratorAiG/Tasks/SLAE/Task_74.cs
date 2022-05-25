@@ -80,7 +80,7 @@ namespace GenaratorAiG.Tasks.SLAE
             formules.Add(condition);
             return formules;
         }
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
             result += "\\pmatrix{";
             for (int i = 0; i < length; i++)
@@ -124,7 +124,9 @@ namespace GenaratorAiG.Tasks.SLAE
             }
             result += "}";
 
-            return result;
+            List<string> listResult = new List<string>();
+            listResult.Add(result);
+            return listResult;
         }
 
         public double[,] MultiplyMatrix(int[,] A, int[,] B)

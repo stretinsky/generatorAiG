@@ -98,7 +98,7 @@ namespace GenaratorAiG.Tasks.SLAE
             return formules;
         }
 
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
             result += $"\\pmatrix{{";
 
@@ -122,7 +122,9 @@ namespace GenaratorAiG.Tasks.SLAE
 
             result += "}";
 
-            return result;
+            List<string> listResult = new List<string>();
+            listResult.Add(result);
+            return listResult;
         }
 
         static int[,] Multiplication(int[,] a, int[,] b)

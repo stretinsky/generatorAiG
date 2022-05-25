@@ -59,9 +59,11 @@ namespace GenaratorAiG.Tasks.Determinants
             formules.Add(condition);
             return formules;
         }
-        public string GetAnswer()
+        public List<string> GetAnswer()
         {
-            return permutNumber.ToString();
+            List<string> listResult = new List<string>();
+            listResult.Add(permutNumber.ToString());
+            return listResult;
         }
     }
 }
