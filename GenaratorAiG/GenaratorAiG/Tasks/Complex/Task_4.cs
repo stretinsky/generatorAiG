@@ -5,11 +5,10 @@ namespace GenaratorAiG.Tasks.Complex
 {
     public class Task_4 : Task
     {
-        public Task_4()
+        public Task_4(Random random)
         {
             Description = "Найти действительные значения x и y, при которых комплексные числа являются\n$сопряженными\n$равны.";
 
-            Random random = new Random();
             int x1 = random.Next(-10, 10), x2 = random.Next(-10, 10),
                 y1 = random.Next(-10, 10), y2 = random.Next(-10, 10);
             AnswerLatex = $"a)\\;\\;\\;(x={x1},{x2};y={y1},{y2})";

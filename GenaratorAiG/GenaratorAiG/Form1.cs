@@ -71,8 +71,8 @@ namespace GenaratorAiG
             for (int k = 0; k < variant; k++)
             {
                 ////Complex
-                kryptonTreeView1.Nodes[0].Nodes[1].Tag = new Task_19();
-                kryptonTreeView1.Nodes[0].Nodes[0].Tag = new Task_4();
+                kryptonTreeView1.Nodes[0].Nodes[1].Tag = new Task_19(random);
+                kryptonTreeView1.Nodes[0].Nodes[0].Tag = new Task_4(random);
 
 
                 //Determinants
@@ -86,28 +86,28 @@ namespace GenaratorAiG
 
 
                 //SLAE
-                kryptonTreeView1.Nodes[2].Nodes[0].Tag = new Task_72();
-                kryptonTreeView1.Nodes[2].Nodes[1].Tag = new Task_73();
-                kryptonTreeView1.Nodes[2].Nodes[2].Tag = new Task_74();
-                kryptonTreeView1.Nodes[2].Nodes[3].Tag = new Task_76();
-                kryptonTreeView1.Nodes[2].Nodes[4].Tag = new Task_80();
-                kryptonTreeView1.Nodes[2].Nodes[5].Tag = new Task_82();
-                kryptonTreeView1.Nodes[2].Nodes[6].Tag = new Task_87();
-                kryptonTreeView1.Nodes[2].Nodes[7].Tag = new Task_88();
-                kryptonTreeView1.Nodes[2].Nodes[8].Tag = new Task_89();
+                kryptonTreeView1.Nodes[2].Nodes[0].Tag = new Task_72(random);
+                kryptonTreeView1.Nodes[2].Nodes[1].Tag = new Task_73(random);
+                kryptonTreeView1.Nodes[2].Nodes[2].Tag = new Task_74(random);
+                kryptonTreeView1.Nodes[2].Nodes[3].Tag = new Task_76(random);
+                kryptonTreeView1.Nodes[2].Nodes[4].Tag = new Task_80(random);
+                kryptonTreeView1.Nodes[2].Nodes[5].Tag = new Task_82(random);
+                kryptonTreeView1.Nodes[2].Nodes[6].Tag = new Task_87(random);
+                kryptonTreeView1.Nodes[2].Nodes[7].Tag = new Task_88(random);
+                kryptonTreeView1.Nodes[2].Nodes[8].Tag = new Task_89(random);
 
 
                 //Analytical Geometry
-                kryptonTreeView1.Nodes[3].Nodes[0].Tag = new Task_104();
-                kryptonTreeView1.Nodes[3].Nodes[1].Tag = new Task_105();
-                kryptonTreeView1.Nodes[3].Nodes[2].Tag = new Task_108();
-                kryptonTreeView1.Nodes[3].Nodes[3].Tag = new Task_117();
-                kryptonTreeView1.Nodes[3].Nodes[4].Tag = new Task_118();
-                kryptonTreeView1.Nodes[3].Nodes[5].Tag = new Task_119();
-                kryptonTreeView1.Nodes[3].Nodes[6].Tag = new Task_125();
-                kryptonTreeView1.Nodes[3].Nodes[7].Tag = new Task_126();
-                kryptonTreeView1.Nodes[3].Nodes[8].Tag = new Task_152();
-                kryptonTreeView1.Nodes[3].Nodes[9].Tag = new Task_160();
+                kryptonTreeView1.Nodes[3].Nodes[0].Tag = new Task_104(random);
+                kryptonTreeView1.Nodes[3].Nodes[1].Tag = new Task_105(random);
+                kryptonTreeView1.Nodes[3].Nodes[2].Tag = new Task_108(random);
+                kryptonTreeView1.Nodes[3].Nodes[3].Tag = new Task_117(random);
+                kryptonTreeView1.Nodes[3].Nodes[4].Tag = new Task_118(random);
+                kryptonTreeView1.Nodes[3].Nodes[5].Tag = new Task_119(random);
+                kryptonTreeView1.Nodes[3].Nodes[6].Tag = new Task_125(random);
+                kryptonTreeView1.Nodes[3].Nodes[7].Tag = new Task_126(random);
+                kryptonTreeView1.Nodes[3].Nodes[8].Tag = new Task_152(random);
+                kryptonTreeView1.Nodes[3].Nodes[9].Tag = new Task_160(random);
 
                 pdf.Number = 0;
                 pdf.Various++;

@@ -5,13 +5,12 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
 {
     class Task_108 : Task
     {
-        Random random = new Random();
-        public Task_108()
+        public Task_108(Random random)
         {
             Description = "Вычислить угол между векторами $ и$, где $ и $ – единичные взаимно перпендикулярные векторы.";
-            GenerateTask();
+            GenerateTask(random);
         }
-        public void GenerateTask()
+        public void GenerateTask(Random random)
         {
             Vector a = Vector.GenerateRandomVector(2, random, -5, 5), b = Vector.GenerateRandomVector(2, random, -5, 5);
             taskLatex.Add(Expression($"\\vec{{a}}={a.Coordinates[0]}\\vec{{p}}+{a.Coordinates[1]}\\vec{{q}}"));

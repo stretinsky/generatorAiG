@@ -12,11 +12,10 @@ namespace GenaratorAiG.Tasks.SLAE
         int length, height;
         int[,] matrix, matrixT;
         double[,] answer1, answer2;
-        Random rnd = new Random();
         string result = "";
         string condition = "";
 
-        public Task_74()
+        public Task_74(Random rnd)
         {
             length = rnd.Next(2, 5);
             height = rnd.Next(2, 4);

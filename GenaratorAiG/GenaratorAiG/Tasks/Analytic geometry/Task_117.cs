@@ -9,12 +9,11 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
     internal class Task_117: ITask
     {
         string description = "Найти векторное произведение векторов [a, b]"; //Над а и б вектора должны быть
-        Random rnd = new Random();
         int[,] vectors = new int[2, 3];
         string result, condition = "";
         int[] answer = new int[3];
 
-        public Task_117()
+        public Task_117(Random rnd)
         {
             for (int i = 0; i < 2; i++)
             {

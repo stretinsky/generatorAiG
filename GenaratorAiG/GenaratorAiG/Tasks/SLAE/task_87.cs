@@ -11,14 +11,13 @@ namespace GenaratorAiG.Tasks.SLAE
     {
         private string desciption = "Решить систему линейных уравнений с помощью правила Крамера:";
         int[] zero = new int[1] { 0 };
-        Random rnd = new Random();
         int[,] slae = new int[3, 3];
         int determinant = 0;
         string condition, answer = "";
         int[] results = new int[3];
         int determinant1, determinant2, determinant3;
 
-        public Task_87()
+        public Task_87(Random rnd)
         {
             while (determinant == 0)
             {

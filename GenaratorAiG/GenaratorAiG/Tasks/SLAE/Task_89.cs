@@ -9,8 +9,8 @@ namespace GenaratorAiG.Tasks.SLAE
 {
     class Task_89 : Task_88, ITask
     {
-
-        public virtual string GetAnswer()
+        public Task_89(Random random) : base(random) { }
+        public override string GetAnswer()
         {
             Fraction fraction1 = new Fraction(answers[0], determinant);
             Fraction fraction2 = new Fraction(answers[1], determinant);

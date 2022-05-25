@@ -9,13 +9,12 @@ namespace GenaratorAiG.Tasks.SLAE
     internal class Task_72: ITask
     {
         string description = "Найти произведения матриц A * B и B * A:";
-        Random rnd = new Random();
         int[,] matrixA, matrixB;
         int lengthA, heightA, lengthB, heightB;
         int[,] resultM;
         string condition, result;
 
-        public Task_72()
+        public Task_72(Random rnd)
         {
             lengthA = rnd.Next(2, 5);
             heightA = rnd.Next(3, 5);

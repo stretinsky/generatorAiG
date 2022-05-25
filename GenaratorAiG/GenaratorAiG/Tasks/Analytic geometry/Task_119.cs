@@ -10,8 +10,8 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
 {
     class Task_119 : Task
     {
-        Random random = new Random();
-        public Task_119()
+       
+        public Task_119(Random random)
         {
             Description = "a) Дан треугольник с вершинами $, $, $." +
                 "Найти площадь треугольника и длину его высоты, опущенной из вершины $ на сторону $.\n" +

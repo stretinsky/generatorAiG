@@ -16,9 +16,8 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
     {
         Point A, B, C, D;
         string desciption = "Проверить, что точки A, B, C, D лежат в одной плоскости", condition = "", answer = "";
-        public Task_126()
+        public Task_126(Random rnd)
         {
-            Random rnd = new Random();
             A.x = rnd.Next(-10, 10);
             A.y = rnd.Next(-10, 10);
             A.z = rnd.Next(-10, 10);

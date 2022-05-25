@@ -10,11 +10,9 @@ namespace GenaratorAiG.Tasks.SLAE
     {
         string description = "Найти матрицу A^n";
         int[,] matrix = new int[2, 2];
-        Random rnd = new Random();
         int n, choice;
       
-
-        public Task_76()
+        public Task_76(Random rnd)
         {
             choice = rnd.Next(2);
 

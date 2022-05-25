@@ -9,24 +9,23 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
 {
     class Task_105 : Task
     {
-        private Random random = new Random();
         private string latex = "";
         private string letters = "abcdefghijklmnopqrstuvwxyz";
-        public Task_105(int n)
+        public Task_105(int n, Random random)
         {
             Description = "Вычислить скалярное произведение векторов $ и $, заданных своими координатами, и углы между ними: ";
             taskLatex.Add("\\vec{a}");
             taskLatex.Add("\\vec{b}");
-            GenerateTask(n);
+            GenerateTask(n, random);
         }
-        public Task_105()
+        public Task_105(Random random)
         {
             Description = "Вычислить скалярное произведение векторов $ и $, заданных своими координатами, и углы между ними: ";
             taskLatex.Add("\\vec{a}");
             taskLatex.Add("\\vec{b}");
-            GenerateTask(3);
+            GenerateTask(3, random);
         }
-        public void GenerateTask(int n)
+        public void GenerateTask(int n, Random random)
         {
             for (int i = 0; i < n; i++)
             {

@@ -11,13 +11,12 @@ namespace GenaratorAiG.Tasks.SLAE
         string description = "Найти обратную матрицу методом присоединённой матрицы";
         int[,] a = new int[3, 3], intermediate = new int[3, 3], reverse = new int[3, 3];
         int determinant = 0;
-        Random rnd = new Random();
 
-        public Task_80()
+        public Task_80(Random rnd)
         {
             while (determinant == 0)
             {
-                CreateMatrix();
+                CreateMatrix(rnd);
                 determinant = a[0, 0] * a[1, 1] * a[2, 2] + a[0, 1] * a[1, 2] * a[2, 0] + a[0, 2] * a[1, 0] * a[2, 1] -
                     a[0, 2] * a[1, 1] * a[2, 0] - a[0, 1] * a[1, 0] * a[2, 2] - a[0, 0] * a[1, 2] * a[2, 1];
             }
@@ -73,13 +72,13 @@ namespace GenaratorAiG.Tasks.SLAE
                 $"\\\\ {reverse[2, 0]} & {reverse[2, 1]} & {reverse[2, 2]}}}";
         }
 
-        public void CreateMatrix()
+        public void CreateMatrix(Random random)
         {
             for (int i = 0; i < 3; i++)
             {
-                a[i, 0] = rnd.Next(-5, 10);
-                a[i, 1] = rnd.Next(-5, 10);
-                a[i, 2] = rnd.Next(-5, 10);
+                a[i, 0] = random.Next(-5, 10);
+                a[i, 1] = random.Next(-5, 10);
+                a[i, 2] = random.Next(-5, 10);
             }
         }
     }

@@ -10,12 +10,11 @@ namespace GenaratorAiG.Tasks.SLAE
     {
         string description = "Найти линейные комбинации матрицы:";
         int[,] matrixA, matrixB, resultM;
-        Random rnd = new Random();
         int length, choice, indexA, indexB;
         string condition, result;
         int[] zero = new int[1] { 0 };
 
-        public Task_73()
+        public Task_73(Random rnd)
         {
             length = rnd.Next(3, 5);
             matrixA = new int[3, length];

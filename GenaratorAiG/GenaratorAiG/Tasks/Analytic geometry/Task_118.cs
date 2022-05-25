@@ -8,8 +8,7 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
 {
     class Task_118 : Task
     {
-        Random random = new Random();
-        public Task_118()
+        public Task_118(Random random)
         {
             Description = "Упростите выражение:";
             int[] pm = new int[] { -1, 1 };

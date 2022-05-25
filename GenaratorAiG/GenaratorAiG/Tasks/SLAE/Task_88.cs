@@ -10,14 +10,13 @@ namespace GenaratorAiG.Tasks.SLAE
     class Task_88: ITask
     {
         string description = "Решить систему уравнений матричным методом";
-        Random rnd = new Random();
         int[,] slae = new int[3, 3];
         int[] matrixX = new int[3];
         int[,] inverse = new int[3, 3];
         public int determinant = 0;
         public int[] answers = new int[3];
 
-        public Task_88()
+        public Task_88(Random rnd)
         {
             do
             {
@@ -71,7 +70,7 @@ namespace GenaratorAiG.Tasks.SLAE
             return formules;
         }
 
-        public string GetAnswer()
+        public virtual string GetAnswer()
         {
             Fraction fraction1 = new Fraction(answers[0], determinant);
             Fraction fraction2 = new Fraction(answers[1], determinant);

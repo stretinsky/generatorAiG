@@ -9,11 +9,11 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
     internal class Task_125: ITask
     {
         string description = "Проверить, компланарны ли следующие вектора:";
-        Random rnd = new Random();
+        
         int[,] vectors = new int[3, 3];
         int determinant;
 
-        public Task_125()
+        public Task_125(Random rnd)
         {
             for (int i = 0; i < 3; i++)
             {

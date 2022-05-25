@@ -5,8 +5,7 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
 {
     public class Task_104 : Task
     {
-        Random random = new Random();
-        public Task_104()
+        public Task_104(Random random)
         {
             Description = "Пусть $ . Найти скалярное произведение векторов $ .";
 

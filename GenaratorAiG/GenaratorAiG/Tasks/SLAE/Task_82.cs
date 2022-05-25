@@ -9,7 +9,6 @@ namespace GenaratorAiG.Tasks.SLAE
     internal class Task_82: ITask
     {
         string description = "Решить матричные уравнения:";
-        Random rnd = new Random();
         int[,] matrix1 = new int[2, 2];
         int[,] matrix2 = new int[2, 2];
         int[,] reverse1 = new int[2, 2];
@@ -17,9 +16,9 @@ namespace GenaratorAiG.Tasks.SLAE
         int[] zero = new int[1] { 0 };
         int det = 0;
 
-        public Task_82()
+        public Task_82(Random rnd)
         {
-            GenerateMatrix();
+            GenerateMatrix(rnd);
 
             reverse1[0, 0] = matrix1[1, 1];
             reverse1[0, 1] = -1 * matrix1[0, 1];
@@ -52,7 +51,7 @@ namespace GenaratorAiG.Tasks.SLAE
                 return $"\\frac{{1}}{{{det}}}\\pmatrix{{{result[0, 0]} & {result[0, 1]} \\\\ {result[1, 0]} & {result[1, 1]}}}";
         }
 
-        public void GenerateMatrix()
+        public void GenerateMatrix(Random random)
         {
             while (det == 0)
             {
@@ -60,25 +59,25 @@ namespace GenaratorAiG.Tasks.SLAE
                 {
                     do
                     {
-                        matrix1[i, 0] = rnd.Next(-5, 10);
+                        matrix1[i, 0] = random.Next(-5, 10);
                     }
                     while (zero.Contains(matrix1[i, 0]));
 
                     do
                     {
-                        matrix1[i, 1] = rnd.Next(-5, 10);
+                        matrix1[i, 1] = random.Next(-5, 10);
                     }
                     while (zero.Contains(matrix1[i, 1]));
 
                     do
                     {
-                        matrix2[i, 0] = rnd.Next(-5, 10);
+                        matrix2[i, 0] = random.Next(-5, 10);
                     }
                     while (zero.Contains(matrix2[i, 0]));
 
                     do
                     {
-                        matrix2[i, 1] = rnd.Next(-5, 10);
+                        matrix2[i, 1] = random.Next(-5, 10);
                     }
                     while (zero.Contains(matrix2[i, 1]));
                 }

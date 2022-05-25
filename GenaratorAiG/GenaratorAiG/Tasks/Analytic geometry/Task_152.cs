@@ -10,11 +10,10 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
     {
         string description;
         int x, y, z, p;
-        Random rnd = new Random();
         int[,] points = new int[6, 3];
         string result, resultLATEX = "";
 
-        public Task_152()
+        public Task_152(Random rnd)
         {
             x = rnd.Next(2, 10);
             y = rnd.Next(2, 10);
