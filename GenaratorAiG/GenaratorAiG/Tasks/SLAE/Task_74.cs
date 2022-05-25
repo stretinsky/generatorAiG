@@ -54,7 +54,7 @@ namespace GenaratorAiG.Tasks.SLAE
         public List<string> GetCondition()
         {
             condition = "";
-            condition += "\\pmatrix{";
+            condition += "\\left(\\matrix{";
             for (int i = 0; i < length; i++)
             {
                 for (int j = 0; j < height; j++)
@@ -72,7 +72,7 @@ namespace GenaratorAiG.Tasks.SLAE
 
                 condition += " \\\\ ";
             }
-            condition += "}";
+            condition += "}\\right)";
 
             List<string> formules = new List<string>();
             formules.Add(condition);
@@ -81,7 +81,7 @@ namespace GenaratorAiG.Tasks.SLAE
         public List<string> GetAnswer()
         {
             result = "";
-            result += "A * A^T = \\pmatrix{";
+            result += "A * A^T = \\left(\\matrix{";
             for (int i = 0; i < length; i++)
             {
                 for (int j = 0; j < length; j++)
@@ -99,11 +99,11 @@ namespace GenaratorAiG.Tasks.SLAE
 
                 result += " \\\\ ";
             }
-            result += "}";
+            result += "}\\right)";
 
             result += "\\\\";
 
-            result += "A^T * A = \\pmatrix{";
+            result += "A^T * A = \\left(\\matrix{";
             for (int i = 0; i < height; i++)
             {
                 for (int j = 0; j < height; j++)
@@ -121,7 +121,7 @@ namespace GenaratorAiG.Tasks.SLAE
 
                 result += " \\\\ ";
             }
-            result += "}";
+            result += "}\\right)";
 
             List<string> listResult = new List<string>();
             listResult.Add(result);

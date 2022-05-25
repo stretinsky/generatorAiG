@@ -55,18 +55,18 @@ namespace GenaratorAiG.Tasks.SLAE
         }
         public List<string> GetCondition()
         {
-            string condition = $" \\pmatrix{{{a[0, 0]} & {a[0, 1]} & {a[0, 2]} " +
+            string condition = $" \\left(\\matrix{{{a[0, 0]} & {a[0, 1]} & {a[0, 2]} " +
                 $"\\\\ {a[1, 0]} & {a[1, 1]} & {a[1, 2]} " +
-                $"\\\\ {a[2, 0]} & {a[2, 1]} & {a[2, 2]}}}";
+                $"\\\\ {a[2, 0]} & {a[2, 1]} & {a[2, 2]}}}\\right)";
             List<string> formules = new List<string>();
             formules.Add(condition);
             return formules;
         }
         public List<string> GetAnswer()
         {
-            string result = $"\\frac{{1}}{{{determinant}}} \\pmatrix{{{reverse[0, 0]} & {reverse[0, 1]} & {reverse[0, 2]} " +
+            string result = $"\\frac{{1}}{{{determinant}}} \\left(\\matrix{{{reverse[0, 0]} & {reverse[0, 1]} & {reverse[0, 2]} " +
                 $"\\\\ {reverse[1, 0]} & {reverse[1, 1]} & {reverse[1, 2]} " +
-                $"\\\\ {reverse[2, 0]} & {reverse[2, 1]} & {reverse[2, 2]}}}";
+                $"\\\\ {reverse[2, 0]} & {reverse[2, 1]} & {reverse[2, 2]}}}\\right)";
             List<string> listResult = new List<string>();
             listResult.Add(result);
             return listResult;

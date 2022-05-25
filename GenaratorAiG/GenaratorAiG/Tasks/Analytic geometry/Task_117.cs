@@ -68,8 +68,8 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
         {
             result = "";
             result += $"\\vec{{ab}} = ";
-            result += "\\pmatrix{ \\vec{i} & \\vec{j} & \\vec{k} \\\\" +
-                $"{vectors[0, 0]} & {vectors[0, 1]} & {vectors[0, 2]} \\\\ {vectors[1, 0]} & {vectors[1, 1]} & {vectors[1, 2]} }} = ";
+            result += "\\left|\\matrix{ \\vec{i} & \\vec{j} & \\vec{k} \\\\" +
+                $"{vectors[0, 0]} & {vectors[0, 1]} & {vectors[0, 2]} \\\\ {vectors[1, 0]} & {vectors[1, 1]} & {vectors[1, 2]} }}\\right| = ";
 
             result += $"{answer[0]}\\vec{{i}}";
 

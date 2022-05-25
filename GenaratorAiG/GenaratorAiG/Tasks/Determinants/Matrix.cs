@@ -89,7 +89,7 @@ namespace GenaratorAiG.Tasks.Determinants
         }
         public string GetLatex()
         {
-            return @"\pmatrix{" + string.Join(@"\\", rows) + @"}";
+            return @"\left|\matrix{" + string.Join(@"\\", rows) + @"}\right|";
         }
         public int this[int i, int j]
         {

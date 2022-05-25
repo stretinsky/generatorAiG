@@ -35,8 +35,8 @@ namespace GenaratorAiG.Tasks.SLAE
         }
         public List<string> GetCondition()
         {
-            string condition = $"\\pmatrix{{{matrix1[0, 0]} & {matrix1[0, 1]} \\\\ {matrix1[1, 0]} & {matrix1[1, 1]}}} X = " +
-                $"\\pmatrix{{{matrix2[0, 0]} & {matrix2[0, 1]} \\\\ {matrix2[1, 0]} & {matrix2[1, 1]}}}";
+            string condition = $"\\left(\\matrix{{{matrix1[0, 0]} & {matrix1[0, 1]} \\\\ {matrix1[1, 0]} & {matrix1[1, 1]}}}\\right) X = " +
+                $"\\left(\\matrix{{{matrix2[0, 0]} & {matrix2[0, 1]} \\\\ {matrix2[1, 0]} & {matrix2[1, 1]}}}\\right)";
             List<string> formules = new List<string>();
             formules.Add(condition);
             return formules;
@@ -45,9 +45,9 @@ namespace GenaratorAiG.Tasks.SLAE
         {
             string answer;
             if (det == 1)
-                answer = $"\\pmatrix{{{result[0, 0]} & {result[0, 1]} \\\\ {result[1, 0]} & {result[1, 1]}}}";
+                answer = $"\\left(\\matrix{{{result[0, 0]} & {result[0, 1]} \\\\ {result[1, 0]} & {result[1, 1]}}}\\right)";
             else
-                answer = $"\\frac{{1}}{{{det}}}\\pmatrix{{{result[0, 0]} & {result[0, 1]} \\\\ {result[1, 0]} & {result[1, 1]}}}";
+                answer = $"\\frac{{1}}{{{det}}}\\left(\\matrix{{{result[0, 0]} & {result[0, 1]} \\\\ {result[1, 0]} & {result[1, 1]}}}\\right)";
             List<string> listResult = new List<string>();
             listResult.Add(answer);
             return listResult;

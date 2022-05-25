@@ -45,14 +45,14 @@ namespace GenaratorAiG.Tasks.SLAE
             string condition;
             if (choice == 0)
             {
-                condition = $"\\pmatrix{{{matrix[0, 0]} & {matrix[0, 1]} \\\\ {matrix[1, 0]} & {matrix[1, 1]}}}";
+                condition = $"\\left(\\matrix{{{matrix[0, 0]} & {matrix[0, 1]} \\\\ {matrix[1, 0]} & {matrix[1, 1]}}}\\right)";
             }
             else
             {
                 if (n == 1)
-                    condition = $"\\pmatrix{{cos(x) & sin(x) \\\\ -sin(x) & cos(x)}}";
+                    condition = $"\\left(\\matrix{{cos(x) & sin(x) \\\\ -sin(x) & cos(x)}}\\right)";
                 else
-                    condition = $"\\pmatrix{{cos({n}x) & sin({n}x) \\\\ -sin({n}x) & cos({n}x)}}";
+                    condition = $"\\left(\\matrix{{cos({n}x) & sin({n}x) \\\\ -sin({n}x) & cos({n}x)}}\\right)";
             }
             List<string> formules = new List<string>();
             formules.Add(condition);
@@ -64,16 +64,16 @@ namespace GenaratorAiG.Tasks.SLAE
             if (choice == 0)
             {
                 if (n == 1)
-                    result = $"A^n = \\pmatrix{{{matrix[0, 0]} & n \\\\ {matrix[1, 0]} & {matrix[1, 1]}}}";
+                    result = $"A^n = \\left(\\matrix{{{matrix[0, 0]} & n \\\\ {matrix[1, 0]} & {matrix[1, 1]}}}\\right)";
                 else
-                    result = $"A^n = \\pmatrix{{{matrix[0, 0]} & {matrix[0, 1]}n \\\\ {matrix[1, 0]} & {matrix[1, 1]}}}";
+                    result = $"A^n = \\left(\\matrix{{{matrix[0, 0]} & {matrix[0, 1]}n \\\\ {matrix[1, 0]} & {matrix[1, 1]}}}\\right)";
             }
             else if (choice == 1)
             {
                 if (n == 1)
-                    result = $"A^n = \\pmatrix{{cos(nx) & sin(nx) \\\\ -sin(nx) & cos(nx)}}";
+                    result = $"A^n = \\left(\\matrix{{cos(nx) & sin(nx) \\\\ -sin(nx) & cos(nx)}}\\right)";
                 else
-                    result = $"A^n = \\pmatrix{{cos(n{n}x) & sin(n{n}x) \\\\ -sin(n{n}x) & cos(n{n}x)}}";
+                    result = $"A^n = \\left(\\matrix{{cos(n{n}x) & sin(n{n}x) \\\\ -sin(n{n}x) & cos(n{n}x)}}\\right)";
             }
 
             List<string> listResult = new List<string>();

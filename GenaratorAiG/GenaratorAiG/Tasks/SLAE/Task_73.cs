@@ -59,7 +59,7 @@ namespace GenaratorAiG.Tasks.SLAE
                         condition += $"{indexA}A - {indexB}B - \\lambda E, ";
 
                         //Матрица А
-                        condition += $"A = \\pmatrix{{";
+                        condition += $"A = \\left(\\matrix{{";
                         for (int i = 0; i < 3; i++)
                         {
                             for (int j = 0; j < length; j++)
@@ -72,10 +72,10 @@ namespace GenaratorAiG.Tasks.SLAE
 
                             condition += "\\\\";
                         }
-                        condition += "}, ";
+                        condition += "}\\right), ";
 
                         //Матрица B
-                        condition += $"B = \\pmatrix{{";
+                        condition += $"B = \\left(\\matrix{{";
                         for (int i = 0; i < 3; i++)
                         {
                             for (int j = 0; j < length; j++)
@@ -88,7 +88,7 @@ namespace GenaratorAiG.Tasks.SLAE
 
                             condition += "\\\\";
                         }
-                        condition += "}, ";
+                        condition += "}\\right), ";
 
                         formules.Add(condition);
                         return formules;
@@ -98,7 +98,7 @@ namespace GenaratorAiG.Tasks.SLAE
                         condition += $"{indexA}A - \\lambda E, ";
 
                         //Матрица А
-                        condition += $"A = \\pmatrix{{";
+                        condition += $"A = \\left(\\matrix{{";
                         for (int i = 0; i < 3; i++)
                         {
                             for (int j = 0; j < length; j++)
@@ -111,7 +111,7 @@ namespace GenaratorAiG.Tasks.SLAE
 
                             condition += "\\\\";
                         }
-                        condition += "}, ";
+                        condition += "}\\right), ";
 
                         formules.Add(condition);
                         return formules;
@@ -121,7 +121,7 @@ namespace GenaratorAiG.Tasks.SLAE
                         condition += $"{indexA}A - {indexB}B, ";
 
                         //Матрица А
-                        condition += $"A = \\pmatrix{{";
+                        condition += $"A = \\left(\\matrix{{";
                         for (int i = 0; i < 3; i++)
                         {
                             for (int j = 0; j < length; j++)
@@ -134,10 +134,10 @@ namespace GenaratorAiG.Tasks.SLAE
 
                             condition += "\\\\";
                         }
-                        condition += "}, ";
+                        condition += "}\\right), ";
 
                         //Матрица B
-                        condition += $"B = \\pmatrix{{";
+                        condition += $"B = \\left(\\matrix{{";
                         for (int i = 0; i < 3; i++)
                         {
                             for (int j = 0; j < length; j++)
@@ -150,7 +150,7 @@ namespace GenaratorAiG.Tasks.SLAE
 
                             condition += "\\\\";
                         }
-                        condition += "}, ";
+                        condition += "}\\right), ";
 
                         formules.Add(condition);
                         return formules;
@@ -181,7 +181,7 @@ namespace GenaratorAiG.Tasks.SLAE
                             }
                         }
 
-                        result += "\\pmatrix{";
+                        result += "\\left(\\matrix{";
                         for (int i = 0; i < 3; i++)
                         {
                             for (int j = 0; j < length; j++)
@@ -202,7 +202,7 @@ namespace GenaratorAiG.Tasks.SLAE
 
                             result += "\\\\";
                         }
-                        result += "}";
+                        result += "}\\right)";
 
                         listResult.Add(result);
                         return listResult;
@@ -217,7 +217,7 @@ namespace GenaratorAiG.Tasks.SLAE
                             }
                         }
 
-                        result += "\\pmatrix{";
+                        result += "\\left(\\matrix{";
                         for (int i = 0; i < 3; i++)
                         {
                             for (int j = 0; j < length; j++)
@@ -238,7 +238,7 @@ namespace GenaratorAiG.Tasks.SLAE
 
                             result += "\\\\";
                         }
-                        result += "}";
+                        result += "}\\right)";
 
                         listResult.Add(result);
                         return listResult;
@@ -253,7 +253,7 @@ namespace GenaratorAiG.Tasks.SLAE
                             }
                         }
 
-                        result += "\\pmatrix{";
+                        result += "\\left(\\matrix{";
                         for (int i = 0; i < 3; i++)
                         {
                             for (int j = 0; j < length; j++)
@@ -271,7 +271,7 @@ namespace GenaratorAiG.Tasks.SLAE
 
                             result += "\\\\";
                         }
-                        result += "}";
+                        result += "}\\right)";
 
                         listResult.Add(result);
                         return listResult;

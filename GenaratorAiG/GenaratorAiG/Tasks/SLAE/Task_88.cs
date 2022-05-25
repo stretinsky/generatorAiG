@@ -72,11 +72,11 @@ namespace GenaratorAiG.Tasks.SLAE
             Fraction fraction1 = new Fraction(answers[0], determinant);
             Fraction fraction2 = new Fraction(answers[1], determinant);
             Fraction fraction3 = new Fraction(answers[2], determinant);
-            string result = $"\\frac{{1}}{{{determinant}}}  \\pmatrix{{{inverse[0, 0]} & {inverse[0, 1]} & {inverse[0, 2]} \\\\" +
+            string result = $"\\frac{{1}}{{{determinant}}}  \\left(\\matrix{{{inverse[0, 0]} & {inverse[0, 1]} & {inverse[0, 2]} \\\\" +
                 $" {inverse[1, 0]} & {inverse[1, 1]} & {inverse[1, 2]} \\\\" +
-                $" {inverse[2, 0]} & {inverse[2, 1]} & {inverse[2, 2]}}} " +
-                $" \\pmatrix{{{matrixX[0]} \\\\ {matrixX[1]} \\\\ {matrixX[2]}}} = " +
-                $"\\pmatrix{{ \\frac{{{fraction1.Numerator}}}{{{fraction1.Denominator}}} \\\\ \\frac{{{fraction2.Numerator}}}{{{fraction2.Denominator}}} \\\\ \\frac{{{fraction3.Numerator}}}{{{fraction3.Denominator}}} }}" +
+                $" {inverse[2, 0]} & {inverse[2, 1]} & {inverse[2, 2]}}}\\right) " +
+                $" \\left(\\matrix{{{matrixX[0]} \\\\ {matrixX[1]} \\\\ {matrixX[2]}}}\\right) = " +
+                $"\\left(\\matrix{{ \\frac{{{fraction1.Numerator}}}{{{fraction1.Denominator}}} \\\\ \\frac{{{fraction2.Numerator}}}{{{fraction2.Denominator}}} \\\\ \\frac{{{fraction3.Numerator}}}{{{fraction3.Denominator}}} }}\\right)" +
                 $", \\Delta = {determinant}";
             List<string> listResult = new List<string>();
             listResult.Add(result);
