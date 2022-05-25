@@ -11,7 +11,7 @@ namespace GenaratorAiG
         private LatexImageBuilder latexHandler;
         private string html;
         private int number = 0, various = 0;
-        private double fontSize = 20;
+        private double fontSize = 30;
         private string font = "TimesNewRoman";
         private bool answer = false;
 
@@ -143,7 +143,7 @@ namespace GenaratorAiG
 
         public void WriteVariant()
         {
-            html += $"<center>Вариант {various}</center>";            
+            html += $"<center style='font-size:{fontSize};font-family:{font + 2};'> Вариант {various}</center>";            
         }
 
         public void ClearHtml()

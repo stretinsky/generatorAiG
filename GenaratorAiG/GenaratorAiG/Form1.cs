@@ -59,7 +59,6 @@ namespace GenaratorAiG
             for (int k = 0; k < variant; k++)
             {
                 ////Complex
-                kryptonTreeView1.Nodes[0].Nodes[1].Tag = new Task_19(random);
                 kryptonTreeView1.Nodes[0].Nodes[0].Tag = new Task_4(random);
 
 

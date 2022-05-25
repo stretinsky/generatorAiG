@@ -7,7 +7,7 @@ namespace Latex
     public class LatexImageBuilder
     {
         private string font = "Arial";
-        private float fontSize = 18;
+        private float fontSize = 30;
         public Bitmap CreateLatexImage(string latex)
         {
             TexFormulaParser parser = new TexFormulaParser();
