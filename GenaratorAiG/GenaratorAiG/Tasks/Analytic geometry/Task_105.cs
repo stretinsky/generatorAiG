@@ -9,7 +9,6 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
 {
     class Task_105 : Task
     {
-        private string letters = "abcdefghijklmnopqrstuvwxyz";
         public Task_105(int n, Random random)
         {
             Description = "Вычислить скалярное произведение векторов $ и $, заданных своими координатами, и углы между ними: \n";

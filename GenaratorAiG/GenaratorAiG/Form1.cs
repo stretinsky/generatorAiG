@@ -95,7 +95,10 @@ namespace GenaratorAiG
                 kryptonTreeView1.Nodes[3].Nodes[6].Tag = new Task_125(random);
                 kryptonTreeView1.Nodes[3].Nodes[7].Tag = new Task_126(random);
                 kryptonTreeView1.Nodes[3].Nodes[8].Tag = new Task_152(random);
-                kryptonTreeView1.Nodes[3].Nodes[9].Tag = new Task_160(random);
+                kryptonTreeView1.Nodes[3].Nodes[9].Tag = new Task_156(random);
+                kryptonTreeView1.Nodes[3].Nodes[10].Tag = new Task_157(random);
+                kryptonTreeView1.Nodes[3].Nodes[11].Tag = new Task_158(random);
+                kryptonTreeView1.Nodes[3].Nodes[12].Tag = new Task_160(random);
 
                 pdf.Number = 0;
                 pdf.Various++;
@@ -188,48 +191,47 @@ namespace GenaratorAiG
             //Complex
             if (e.Action != TreeViewAction.Unknown && e.Node.Checked && e.Node == kryptonTreeView1.Nodes[0])
             {
-                kryptonTreeView1.Nodes[0].Nodes[0].Checked = true;
-                kryptonTreeView1.Nodes[0].Nodes[1].Checked = true;
+                for (int i = 0; i < kryptonTreeView1.Nodes[0].Nodes.Count; i++)
+                    kryptonTreeView1.Nodes[0].Nodes[i].Checked = true;
             }
             else if (e.Action != TreeViewAction.Unknown && !e.Node.Checked && e.Node == kryptonTreeView1.Nodes[0])
             {
-                kryptonTreeView1.Nodes[0].Nodes[0].Checked = false;
-                kryptonTreeView1.Nodes[0].Nodes[1].Checked = false;
+                for (int i = 0; i < kryptonTreeView1.Nodes[0].Nodes.Count; i++)
+                    kryptonTreeView1.Nodes[0].Nodes[i].Checked = false;
             }
-
             //Determinants
             if (e.Action != TreeViewAction.Unknown && e.Node.Checked && e.Node == kryptonTreeView1.Nodes[1])
             {
-                for (int i = 0; i < 7; i++)
+                for (int i = 0; i < kryptonTreeView1.Nodes[1].Nodes.Count; i++)
                     kryptonTreeView1.Nodes[1].Nodes[i].Checked = true;
             }
             else if (e.Action != TreeViewAction.Unknown && !e.Node.Checked && e.Node == kryptonTreeView1.Nodes[1])
             {
-                for (int i = 0; i < 7; i++)
+                for (int i = 0; i < kryptonTreeView1.Nodes[1].Nodes.Count; i++)
                     kryptonTreeView1.Nodes[1].Nodes[i].Checked = false;
             }
 
             //SLAE
             if (e.Action != TreeViewAction.Unknown && e.Node.Checked && e.Node == kryptonTreeView1.Nodes[2])
             {
-                for (int i = 0; i < 9; i++)
+                for (int i = 0; i < kryptonTreeView1.Nodes[2].Nodes.Count; i++)
                     kryptonTreeView1.Nodes[2].Nodes[i].Checked = true;
             }
             else if (e.Action != TreeViewAction.Unknown && !e.Node.Checked && e.Node == kryptonTreeView1.Nodes[2])
             {
-                for (int i = 0; i < 9; i++)
+                for (int i = 0; i < kryptonTreeView1.Nodes[2].Nodes.Count; i++)
                     kryptonTreeView1.Nodes[2].Nodes[i].Checked = false;
             }
 
             //Analytic Geometry
             if (e.Action != TreeViewAction.Unknown && e.Node.Checked && e.Node == kryptonTreeView1.Nodes[3])
             {
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < kryptonTreeView1.Nodes[3].Nodes.Count; i++)
                     kryptonTreeView1.Nodes[3].Nodes[i].Checked = true;
             }
             else if (e.Action != TreeViewAction.Unknown && !e.Node.Checked && e.Node == kryptonTreeView1.Nodes[3])
             {
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < kryptonTreeView1.Nodes[3].Nodes.Count; i++)
                     kryptonTreeView1.Nodes[3].Nodes[i].Checked = false;
             }
         }

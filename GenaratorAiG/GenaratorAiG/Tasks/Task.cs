@@ -8,6 +8,7 @@ namespace GenaratorAiG.Tasks
 {
     public class Task : ITask
     {
+        protected string letters = "abcdefghijklmnopqrstuvwxyz";
         public string Description { get; protected set; }
         public string GetDescription()
         {
@@ -63,6 +64,47 @@ namespace GenaratorAiG.Tasks
                 return ((int)Math.Sqrt(number)).ToString();
             }
             return $"\\sqrt{{{number}}}";
+        }
+        protected int[] ReduceFraction(int a, int b)
+        {
+            if (b == 0) throw new DivideByZeroException();
+            if (a == 0) return new int[] { a, b };
+            bool isPositive = false;
+            if ((float)a / b > 0) isPositive = true;
+
+            if (a < 0) a = -a;
+            if (b < 0) b = -b;
+            int m = a, n = b;
+            while (m != n)
+            {
+                if (m > n)
+                    m -= n;
+                else
+                    n -= m;
+            }
+            a /= n;
+            b /= n;
+            if (isPositive) return new int[] { a, b };
+            return new int[] { -a, b };
+        }
+        protected string BuildFraction(int[] numerator, int[] denominator)
+        {
+            int numProduct = 1, denProduct = 1;
+            foreach (int n in numerator)
+                numProduct *= n;
+            foreach (int n in denominator)
+                denProduct *= n;
+            int[] fraction = ReduceFraction(numProduct, denProduct);
+            if (fraction[1] == 1)
+            {
+                return fraction[0].ToString();
+            }
+            else if (fraction[0] == 0) return "0";
+            return $"\\frac{{{fraction[0]}}}{{{fraction[1]}}}";
+        }
+        protected string BuildFraction(int numerator, int denominator)
+        {
+            return BuildFraction(new int[] { numerator }, new int[] { denominator });
         }
     }
 }

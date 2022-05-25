@@ -17,7 +17,7 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
             taskLatex.Add(Expression($"\\vec{{b}}={b.Coordinates[0]}\\vec{{p}}+{b.Coordinates[1]}\\vec{{q}}"));
             taskLatex.Add("\\vec{p}");
             taskLatex.Add("\\vec{q}");
-            double angle = 180 / Math.PI * Math.Acos(a.ScalarProduct(b) / Math.Sqrt(a.ScalarProduct(a)) / Math.Sqrt(b.ScalarProduct(b)));
+            double angle = Math.Round(180 / Math.PI * Math.Acos(a.ScalarProduct(b) / Math.Sqrt(a.ScalarProduct(a)) / Math.Sqrt(b.ScalarProduct(b))), 5);
             answerLatex.Add("\\arccos{\\frac{" + a.ScalarProduct(b) + "}{" +
                     StringSqrt(a.ScalarProduct(a)) + StringSqrt(b.ScalarProduct(b)) + "}}\\approx" + angle + "^{\\circ}");
         }
