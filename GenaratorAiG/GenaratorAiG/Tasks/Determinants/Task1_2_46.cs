@@ -18,9 +18,8 @@ namespace GenaratorAiG.Tasks.Determinants
         }
 
         #region Constructor
-        public Task1_2_46()
+        public Task1_2_46(Random random)
         {
-            Random random = new Random();
             permutations = new int[random.Next(6, 11)];
             for (int i = 0; i < permutations.Length; i++)
             {

@@ -21,9 +21,8 @@ namespace GenaratorAiG.Tasks.Determinants
             }
         }
 
-        public Matrix(int dimension, int maxNumber)
+        public Matrix(int dimension, int maxNumber, Random rnd)
         {
-            Random random = new Random();
             matrix = new double[dimension][];
             this.dimension = dimension;
             for (int i = 0; i < matrix.Length; i++)
@@ -31,7 +30,7 @@ namespace GenaratorAiG.Tasks.Determinants
                 matrix[i] = new double[dimension];
                 for (int j = 0; j < matrix[i].Length; j++)
                 {
-                    matrix[i][j] = random.Next(maxNumber + 1) * Math.Pow(-1, random.Next(2));
+                    matrix[i][j] = rnd.Next(maxNumber + 1) * Math.Pow(-1, rnd.Next(2));
                 }
             }
         }

@@ -64,23 +64,23 @@ namespace GenaratorAiG
             variant = Convert.ToByte(VariantTextBox.Text);
             pdfAnswers.ClearHtml();
             pdfAnswers.Various = 0;
+            Random random = new Random();
 
             for (int k = 0; k < variant; k++)
             {
                 ////Complex
                 kryptonTreeView1.Nodes[0].Nodes[1].Tag = new Task_19();
                 kryptonTreeView1.Nodes[0].Nodes[0].Tag = new Task_4();
-                ////дописать методы к таскам: 4
 
 
                 //Determinants
-                kryptonTreeView1.Nodes[1].Nodes[0].Tag = new Task1_2_46();
-                kryptonTreeView1.Nodes[1].Nodes[1].Tag = new Task1_2_58();
-                kryptonTreeView1.Nodes[1].Nodes[2].Tag = new Task1_2_60();
-                kryptonTreeView1.Nodes[1].Nodes[3].Tag = new Task1_2_67();
-                kryptonTreeView1.Nodes[1].Nodes[4].Tag = new Task1_2_68();
-                kryptonTreeView1.Nodes[1].Nodes[5].Tag = new Task1_2_69();
-                kryptonTreeView1.Nodes[1].Nodes[6].Tag = new Task1_2_70();
+                kryptonTreeView1.Nodes[1].Nodes[0].Tag = new Task1_2_46(random);
+                kryptonTreeView1.Nodes[1].Nodes[1].Tag = new Task1_2_58(random);
+                kryptonTreeView1.Nodes[1].Nodes[2].Tag = new Task1_2_60(random);
+                kryptonTreeView1.Nodes[1].Nodes[3].Tag = new Task1_2_67(random);
+                kryptonTreeView1.Nodes[1].Nodes[4].Tag = new Task1_2_68(random);
+                kryptonTreeView1.Nodes[1].Nodes[5].Tag = new Task1_2_69(random);
+                kryptonTreeView1.Nodes[1].Nodes[6].Tag = new Task1_2_70(random);
 
 
                 //SLAE
@@ -106,7 +106,6 @@ namespace GenaratorAiG
                 kryptonTreeView1.Nodes[3].Nodes[7].Tag = new Task_126();
                 kryptonTreeView1.Nodes[3].Nodes[8].Tag = new Task_152();
                 kryptonTreeView1.Nodes[3].Nodes[9].Tag = new Task_160();
-                //переписать методы к таскам: 104, 105, 108, 118, 119
 
                 pdf.Number = 0;
                 pdf.Various++;

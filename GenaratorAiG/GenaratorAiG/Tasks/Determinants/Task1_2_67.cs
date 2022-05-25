@@ -8,9 +8,9 @@ namespace GenaratorAiG.Tasks.Determinants
 {
     public class Task1_2_67 : Task1_2_58
     {
-        public Task1_2_67()
+        public Task1_2_67(Random random) : base(random)
         {
-            matrix = new Determinants.Matrix(4, 7);
+            matrix = new Matrix(4, 7, random);
         }
         public override string GetDescription()
         {

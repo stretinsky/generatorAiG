@@ -9,11 +9,10 @@ namespace GenaratorAiG.Tasks.Determinants
     public class Task1_2_58: ITask
     {
         protected Matrix matrix { get; set; }
-
         #region Constructor
-        public Task1_2_58()
+        public Task1_2_58(Random random)
         {
-            matrix = new Matrix(2, 13);
+            matrix = new Matrix(2, 13, random);
         }
         #endregion
 
