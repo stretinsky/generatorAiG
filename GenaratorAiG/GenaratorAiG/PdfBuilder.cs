@@ -13,6 +13,7 @@ namespace GenaratorAiG
         private int number = 0, various = 0;
         private double fontSize = 20;
         private string font = "TimesNewRoman";
+        private bool answer = false;
 
         public int Number
         {
@@ -25,11 +26,20 @@ namespace GenaratorAiG
             set { various = value; }
         }
 
+        public bool Answer
+        {
+            get { return answer; }
+            set { answer = value; }
+        }
+
         public void HandleTask(string conditionPre, string[] latex)
         {
             //Номер задания
             number++;
             string condition = number.ToString() + ". " + conditionPre;
+
+            if (answer)
+                condition += "\nОтвет: ";
 
             int count = 0;
             foreach (char c in condition)

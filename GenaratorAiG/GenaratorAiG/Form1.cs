@@ -120,6 +120,7 @@ namespace GenaratorAiG
                                 pdf.ShowAnswer(task.GetAnswer(), true);
                                 pdfAnswers.ShowAnswer(task.GetAnswer());
 
+                                resultPdf.Answer = true;
                                 resultPdf.HandleTask(task.GetDescription(), task.GetCondition());
                                 resultPdf.ShowAnswer(task.GetAnswer(), false);
                             }
