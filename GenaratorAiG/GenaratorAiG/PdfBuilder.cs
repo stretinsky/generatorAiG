@@ -38,9 +38,6 @@ namespace GenaratorAiG
             number++;
             string condition = number.ToString() + ". " + conditionPre;
 
-            if (answer)
-                condition += "\nОтвет: ";
-
             int count = 0;
             foreach (char c in condition)
                 if (c == '$') count++;
@@ -109,7 +106,7 @@ namespace GenaratorAiG
             Bitmap img = latexHandler.CreateLatexImage(answer);
             string imgDataURI = IronPdf.Imaging.ImageUtilities.ImageToDataUri(img);
             string imgHtml = string.Format("<img src='{0}' width ='{1}' height='{2}'>", imgDataURI, img.Width, img.Height);
-            html += $"<p style='font-size:{fontSize};font-family:{font};'>{imgHtml}</p>";
+            html += $"<p style='font-size:{fontSize};font-family:{font};'>Ответ:{imgHtml}</p>";
             img.Dispose();
         }
         public void GeneratePdf(string path)
