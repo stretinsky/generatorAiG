@@ -52,6 +52,8 @@ namespace GenaratorAiG
             //    MessageBox.Show(ex.Message);
             //}
 
+            this.MinimumSize = new Size(800, 500);
+
         }
 
         private void GenerateButton_Click(object sender, EventArgs e)
@@ -184,16 +186,53 @@ namespace GenaratorAiG
 
         private void kryptonTreeView1_AfterCheck(object sender, TreeViewEventArgs e)
         {
+            //Complex
+            if (e.Action != TreeViewAction.Unknown && e.Node.Checked && e.Node == kryptonTreeView1.Nodes[0])
+            {
+                kryptonTreeView1.Nodes[0].Nodes[0].Checked = true;
+                kryptonTreeView1.Nodes[0].Nodes[1].Checked = true;
+            }
+            else if (e.Action != TreeViewAction.Unknown && !e.Node.Checked && e.Node == kryptonTreeView1.Nodes[0])
+            {
+                kryptonTreeView1.Nodes[0].Nodes[0].Checked = false;
+                kryptonTreeView1.Nodes[0].Nodes[1].Checked = false;
+            }
 
-            if (e.Action != TreeViewAction.Unknown && e.Node.Checked)
+            //Determinants
+            if (e.Action != TreeViewAction.Unknown && e.Node.Checked && e.Node == kryptonTreeView1.Nodes[1])
             {
-                counter++;
+                for (int i = 0; i < 7; i++)
+                    kryptonTreeView1.Nodes[1].Nodes[i].Checked = true;
             }
-            else 
+            else if (e.Action != TreeViewAction.Unknown && !e.Node.Checked && e.Node == kryptonTreeView1.Nodes[1])
             {
-                counter--;
+                for (int i = 0; i < 7; i++)
+                    kryptonTreeView1.Nodes[1].Nodes[i].Checked = false;
             }
-            CounterLabel.Text = counter.ToString();
+
+            //SLAE
+            if (e.Action != TreeViewAction.Unknown && e.Node.Checked && e.Node == kryptonTreeView1.Nodes[2])
+            {
+                for (int i = 0; i < 9; i++)
+                    kryptonTreeView1.Nodes[2].Nodes[i].Checked = true;
+            }
+            else if (e.Action != TreeViewAction.Unknown && !e.Node.Checked && e.Node == kryptonTreeView1.Nodes[2])
+            {
+                for (int i = 0; i < 9; i++)
+                    kryptonTreeView1.Nodes[2].Nodes[i].Checked = false;
+            }
+
+            //Analytic Geometry
+            if (e.Action != TreeViewAction.Unknown && e.Node.Checked && e.Node == kryptonTreeView1.Nodes[3])
+            {
+                for (int i = 0; i < 10; i++)
+                    kryptonTreeView1.Nodes[3].Nodes[i].Checked = true;
+            }
+            else if (e.Action != TreeViewAction.Unknown && !e.Node.Checked && e.Node == kryptonTreeView1.Nodes[3])
+            {
+                for (int i = 0; i < 10; i++)
+                    kryptonTreeView1.Nodes[3].Nodes[i].Checked = false;
+            }
         }
     }
 }
