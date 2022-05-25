@@ -37,30 +37,11 @@ namespace GenaratorAiG
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    ////Можете сразу посмотреть, как будет выглядеть ваше задание в pdf файле, он в дебаге - document.pdf
-            //    //Task_119 task = new Task_119(); //просто поменяйте таск на свой
-            //    //pdf.HandleTask(task.GetDescription(), task.GetCondition());
-            //    //pdf.ShowAnswer(task.GetAnswer());
-            //    ////pdf.GeneratePdf();
-
-            //    WebBrowser.DocumentText = pdf.GetHTML();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-
             this.MinimumSize = new Size(800, 500);
-
         }
 
         private void GenerateButton_Click(object sender, EventArgs e)
         {
-            
-
-
             pdf.ClearHtml();
             pdf.Various = 0;
             variant = Convert.ToByte(VariantTextBox.Text);
@@ -144,11 +125,6 @@ namespace GenaratorAiG
 
         private void DownloadButton_Click(object sender, EventArgs e)
         {
-            //Byte[] res = PdfSharpConvert(pdf.GetHTML());
-            //using (var stream = new FileStream("file.pdf", FileMode.Create))
-            //{
-            //    stream.Write(res, 0, res.Length);
-            //}
             SaveFileDialog sfd = new SaveFileDialog()
             {
                 Filter = "PDF(*.pdf)|*.pdf"
@@ -181,7 +157,14 @@ namespace GenaratorAiG
 
         private void PrintButton_Click(object sender, EventArgs e)
         {
-            WebBrowser.Print();
+            if (WebBrowser.Url == null)
+            {
+                MessageBox.Show("Сначала сгенерируйте задания", "Ошибка");
+            }
+            else
+            {
+                WebBrowser.Print();
+            }
         }
 
         private void kryptonTreeView1_AfterCheck(object sender, TreeViewEventArgs e)
