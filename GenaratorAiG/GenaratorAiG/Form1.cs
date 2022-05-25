@@ -121,6 +121,7 @@ namespace GenaratorAiG
 
                                 pdf.HandleTask(task.GetDescription(), task.GetCondition());
                                 pdf.ShowAnswer(task.GetAnswer(), true);
+
                                 pdfAnswers.ShowAnswer(task.GetAnswer());
 
                                 resultPdf.Answer = true;

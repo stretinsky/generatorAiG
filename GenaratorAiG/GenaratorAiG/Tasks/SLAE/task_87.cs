@@ -95,10 +95,10 @@ namespace GenaratorAiG.Tasks.SLAE
             answer += $"x_1 = \\frac{{\\Delta_x_1}}{{\\Delta}} = \\frac{{{fraction1.Denominator}}}{{{fraction1.Numerator}}} \\\\";
 
             Fraction fraction2 = new Fraction(determinant, determinant2);
-            answer += $"x_1 = \\frac{{\\Delta_x_1}}{{\\Delta}} = \\frac{{{fraction2.Denominator}}}{{{fraction2.Numerator}}} \\\\";
+            answer += $"x_2 = \\frac{{\\Delta_x_2}}{{\\Delta}} = \\frac{{{fraction2.Denominator}}}{{{fraction2.Numerator}}} \\\\";
 
             Fraction fraction3 = new Fraction(determinant, determinant3);
-            answer += $"x_1 = \\frac{{\\Delta_x_1}}{{\\Delta}} = \\frac{{{fraction3.Denominator}}}{{{fraction3.Numerator}}} \\\\";
+            answer += $"x_3 = \\frac{{\\Delta_x_3}}{{\\Delta}} = \\frac{{{fraction3.Denominator}}}{{{fraction3.Numerator}}} \\\\";
 
             List<string> listResult = new List<string>();
             listResult.Add(answer);

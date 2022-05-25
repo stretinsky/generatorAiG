@@ -9,6 +9,7 @@ namespace GenaratorAiG.Tasks.SLAE
 {
     class Task_89 : Task_88, ITask
     {
+        string description = "Решить систему методом Гаусса";
         public Task_89(Random random) : base(random) { }
         public override List<string> GetAnswer()
         {
@@ -21,6 +22,11 @@ namespace GenaratorAiG.Tasks.SLAE
             List<string> listResult = new List<string>();
             listResult.Add(result);
             return listResult;
+        }
+
+        public override string GetDescription()
+        {
+            return description;
         }
     }
 }

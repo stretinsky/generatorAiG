@@ -55,7 +55,7 @@ namespace GenaratorAiG.Tasks.SLAE
             answers[2] = inverse[2, 0] * matrixX[0] + inverse[2, 1] * matrixX[1] + inverse[2, 2] * matrixX[2];
         }
 
-        public string GetDescription()
+        public virtual string GetDescription()
         {
             return description;
         }

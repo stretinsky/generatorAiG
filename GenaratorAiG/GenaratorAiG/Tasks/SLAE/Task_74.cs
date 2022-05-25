@@ -82,7 +82,7 @@ namespace GenaratorAiG.Tasks.SLAE
         }
         public List<string> GetAnswer()
         {
-            result += "\\pmatrix{";
+            result += "A * A^T = \\pmatrix{";
             for (int i = 0; i < length; i++)
             {
                 for (int j = 0; j < length; j++)
@@ -104,7 +104,7 @@ namespace GenaratorAiG.Tasks.SLAE
 
             result += "\\\\";
 
-            result += "\\pmatrix{";
+            result += "A^T * A = \\pmatrix{";
             for (int i = 0; i < height; i++)
             {
                 for (int j = 0; j < height; j++)
