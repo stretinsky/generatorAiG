@@ -30,66 +30,66 @@ namespace GenaratorAiG
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode65 = new System.Windows.Forms.TreeNode("Нахождение действительных значений");
-            System.Windows.Forms.TreeNode treeNode66 = new System.Windows.Forms.TreeNode("Представление в показательной форме");
-            System.Windows.Forms.TreeNode treeNode67 = new System.Windows.Forms.TreeNode("Комплексные числа", new System.Windows.Forms.TreeNode[] {
-            treeNode65,
-            treeNode66});
-            System.Windows.Forms.TreeNode treeNode68 = new System.Windows.Forms.TreeNode("Число инверсий в перестановках");
-            System.Windows.Forms.TreeNode treeNode69 = new System.Windows.Forms.TreeNode("Определитель 2-го порядка");
-            System.Windows.Forms.TreeNode treeNode70 = new System.Windows.Forms.TreeNode("Определитель 3-его порядка");
-            System.Windows.Forms.TreeNode treeNode71 = new System.Windows.Forms.TreeNode("Теорема о разложении 4го порядка");
-            System.Windows.Forms.TreeNode treeNode72 = new System.Windows.Forms.TreeNode("Метод эффективного понижения 4го порядка");
-            System.Windows.Forms.TreeNode treeNode73 = new System.Windows.Forms.TreeNode("Метод эффективного понижения 5го порядка");
-            System.Windows.Forms.TreeNode treeNode74 = new System.Windows.Forms.TreeNode("Теорема Лапласса");
-            System.Windows.Forms.TreeNode treeNode75 = new System.Windows.Forms.TreeNode("Детерминант", new System.Windows.Forms.TreeNode[] {
-            treeNode68,
-            treeNode69,
-            treeNode70,
-            treeNode71,
-            treeNode72,
-            treeNode73,
-            treeNode74});
-            System.Windows.Forms.TreeNode treeNode76 = new System.Windows.Forms.TreeNode("Произведение матриц A*B и B*A");
-            System.Windows.Forms.TreeNode treeNode77 = new System.Windows.Forms.TreeNode("Линейные комбинации матрицы");
-            System.Windows.Forms.TreeNode treeNode78 = new System.Windows.Forms.TreeNode("Произведение матриц A*A^T и A^T*A");
-            System.Windows.Forms.TreeNode treeNode79 = new System.Windows.Forms.TreeNode("Найти матрицу A^n");
-            System.Windows.Forms.TreeNode treeNode80 = new System.Windows.Forms.TreeNode("Нахождение обратной матрицы");
-            System.Windows.Forms.TreeNode treeNode81 = new System.Windows.Forms.TreeNode("Матричные уравнения");
-            System.Windows.Forms.TreeNode treeNode82 = new System.Windows.Forms.TreeNode("Решение СЛАУ методом Крамера");
-            System.Windows.Forms.TreeNode treeNode83 = new System.Windows.Forms.TreeNode("Решение СЛАУ матричным методом");
-            System.Windows.Forms.TreeNode treeNode84 = new System.Windows.Forms.TreeNode("Решение СЛАУ методом Гаусса");
-            System.Windows.Forms.TreeNode treeNode85 = new System.Windows.Forms.TreeNode("СЛАУ", new System.Windows.Forms.TreeNode[] {
-            treeNode76,
-            treeNode77,
-            treeNode78,
-            treeNode79,
-            treeNode80,
-            treeNode81,
-            treeNode82,
-            treeNode83,
-            treeNode84});
-            System.Windows.Forms.TreeNode treeNode86 = new System.Windows.Forms.TreeNode("Скалярное произведение векторов");
-            System.Windows.Forms.TreeNode treeNode87 = new System.Windows.Forms.TreeNode("Скалярное произведение векторов и углы между ними");
-            System.Windows.Forms.TreeNode treeNode88 = new System.Windows.Forms.TreeNode("Угол между векторами");
-            System.Windows.Forms.TreeNode treeNode89 = new System.Windows.Forms.TreeNode("Векторное произведение векторов");
-            System.Windows.Forms.TreeNode treeNode90 = new System.Windows.Forms.TreeNode("Упростить выражение");
-            System.Windows.Forms.TreeNode treeNode91 = new System.Windows.Forms.TreeNode("Площадь треугольника и его высота");
-            System.Windows.Forms.TreeNode treeNode92 = new System.Windows.Forms.TreeNode("Компланарность векторов");
-            System.Windows.Forms.TreeNode treeNode93 = new System.Windows.Forms.TreeNode("Векторы в плоскости");
-            System.Windows.Forms.TreeNode treeNode94 = new System.Windows.Forms.TreeNode("Пересечение точкой плоскости");
-            System.Windows.Forms.TreeNode treeNode95 = new System.Windows.Forms.TreeNode("Расстояние от точки до плоскости");
-            System.Windows.Forms.TreeNode treeNode96 = new System.Windows.Forms.TreeNode("Аналитическая геометрия", new System.Windows.Forms.TreeNode[] {
-            treeNode86,
-            treeNode87,
-            treeNode88,
-            treeNode89,
-            treeNode90,
-            treeNode91,
-            treeNode92,
-            treeNode93,
-            treeNode94,
-            treeNode95});
+            System.Windows.Forms.TreeNode treeNode97 = new System.Windows.Forms.TreeNode("Нахождение действительных значений");
+            System.Windows.Forms.TreeNode treeNode98 = new System.Windows.Forms.TreeNode("Представление в показательной форме");
+            System.Windows.Forms.TreeNode treeNode99 = new System.Windows.Forms.TreeNode("Комплексные числа", new System.Windows.Forms.TreeNode[] {
+            treeNode97,
+            treeNode98});
+            System.Windows.Forms.TreeNode treeNode100 = new System.Windows.Forms.TreeNode("Число инверсий в перестановках");
+            System.Windows.Forms.TreeNode treeNode101 = new System.Windows.Forms.TreeNode("Определитель 2-го порядка");
+            System.Windows.Forms.TreeNode treeNode102 = new System.Windows.Forms.TreeNode("Определитель 3-его порядка");
+            System.Windows.Forms.TreeNode treeNode103 = new System.Windows.Forms.TreeNode("Теорема о разложении 4го порядка");
+            System.Windows.Forms.TreeNode treeNode104 = new System.Windows.Forms.TreeNode("Метод эффективного понижения 4го порядка");
+            System.Windows.Forms.TreeNode treeNode105 = new System.Windows.Forms.TreeNode("Метод эффективного понижения 5го порядка");
+            System.Windows.Forms.TreeNode treeNode106 = new System.Windows.Forms.TreeNode("Теорема Лапласса");
+            System.Windows.Forms.TreeNode treeNode107 = new System.Windows.Forms.TreeNode("Детерминант", new System.Windows.Forms.TreeNode[] {
+            treeNode100,
+            treeNode101,
+            treeNode102,
+            treeNode103,
+            treeNode104,
+            treeNode105,
+            treeNode106});
+            System.Windows.Forms.TreeNode treeNode108 = new System.Windows.Forms.TreeNode("Произведение матриц A*B и B*A");
+            System.Windows.Forms.TreeNode treeNode109 = new System.Windows.Forms.TreeNode("Линейные комбинации матрицы");
+            System.Windows.Forms.TreeNode treeNode110 = new System.Windows.Forms.TreeNode("Произведение матриц A*A^T и A^T*A");
+            System.Windows.Forms.TreeNode treeNode111 = new System.Windows.Forms.TreeNode("Найти матрицу A^n");
+            System.Windows.Forms.TreeNode treeNode112 = new System.Windows.Forms.TreeNode("Нахождение обратной матрицы");
+            System.Windows.Forms.TreeNode treeNode113 = new System.Windows.Forms.TreeNode("Матричные уравнения");
+            System.Windows.Forms.TreeNode treeNode114 = new System.Windows.Forms.TreeNode("Решение СЛАУ методом Крамера");
+            System.Windows.Forms.TreeNode treeNode115 = new System.Windows.Forms.TreeNode("Решение СЛАУ матричным методом");
+            System.Windows.Forms.TreeNode treeNode116 = new System.Windows.Forms.TreeNode("Решение СЛАУ методом Гаусса");
+            System.Windows.Forms.TreeNode treeNode117 = new System.Windows.Forms.TreeNode("СЛАУ", new System.Windows.Forms.TreeNode[] {
+            treeNode108,
+            treeNode109,
+            treeNode110,
+            treeNode111,
+            treeNode112,
+            treeNode113,
+            treeNode114,
+            treeNode115,
+            treeNode116});
+            System.Windows.Forms.TreeNode treeNode118 = new System.Windows.Forms.TreeNode("Скалярное произведение векторов");
+            System.Windows.Forms.TreeNode treeNode119 = new System.Windows.Forms.TreeNode("Скалярное произведение векторов и углы между ними");
+            System.Windows.Forms.TreeNode treeNode120 = new System.Windows.Forms.TreeNode("Угол между векторами");
+            System.Windows.Forms.TreeNode treeNode121 = new System.Windows.Forms.TreeNode("Векторное произведение векторов");
+            System.Windows.Forms.TreeNode treeNode122 = new System.Windows.Forms.TreeNode("Упростить выражение");
+            System.Windows.Forms.TreeNode treeNode123 = new System.Windows.Forms.TreeNode("Площадь треугольника и его высота");
+            System.Windows.Forms.TreeNode treeNode124 = new System.Windows.Forms.TreeNode("Компланарность векторов");
+            System.Windows.Forms.TreeNode treeNode125 = new System.Windows.Forms.TreeNode("Векторы в плоскости");
+            System.Windows.Forms.TreeNode treeNode126 = new System.Windows.Forms.TreeNode("Пересечение точкой плоскости");
+            System.Windows.Forms.TreeNode treeNode127 = new System.Windows.Forms.TreeNode("Расстояние от точки до плоскости");
+            System.Windows.Forms.TreeNode treeNode128 = new System.Windows.Forms.TreeNode("Аналитическая геометрия", new System.Windows.Forms.TreeNode[] {
+            treeNode118,
+            treeNode119,
+            treeNode120,
+            treeNode121,
+            treeNode122,
+            treeNode123,
+            treeNode124,
+            treeNode125,
+            treeNode126,
+            treeNode127});
             this.kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(this.components);
             this.GenerateButton = new Krypton.Toolkit.KryptonButton();
             this.DownloadButton = new Krypton.Toolkit.KryptonButton();
@@ -97,7 +97,6 @@ namespace GenaratorAiG
             this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             this.kryptonTreeView1 = new Krypton.Toolkit.KryptonTreeView();
             this.ChooseLabel = new System.Windows.Forms.Label();
-            this.CounterLabel = new System.Windows.Forms.Label();
             this.VariousLabel = new System.Windows.Forms.Label();
             this.VariantTextBox = new Krypton.Toolkit.KryptonMaskedTextBox();
             this.WebBrowser = new Krypton.Toolkit.KryptonWebBrowser();
@@ -384,75 +383,75 @@ namespace GenaratorAiG
             this.kryptonTreeView1.CheckBoxes = true;
             this.kryptonTreeView1.Location = new System.Drawing.Point(12, 28);
             this.kryptonTreeView1.Name = "kryptonTreeView1";
-            treeNode65.Name = "Node4";
-            treeNode65.Text = "Нахождение действительных значений";
-            treeNode66.Name = "Node19";
-            treeNode66.Text = "Представление в показательной форме";
-            treeNode67.Name = "ComplexNode";
-            treeNode67.Text = "Комплексные числа";
-            treeNode68.Name = "Node46";
-            treeNode68.Text = "Число инверсий в перестановках";
-            treeNode69.Name = "Node58";
-            treeNode69.Text = "Определитель 2-го порядка";
-            treeNode70.Name = "Node60";
-            treeNode70.Text = "Определитель 3-его порядка";
-            treeNode71.Name = "Node67";
-            treeNode71.Text = "Теорема о разложении 4го порядка";
-            treeNode72.Name = "Node68";
-            treeNode72.Text = "Метод эффективного понижения 4го порядка";
-            treeNode73.Name = "Node69";
-            treeNode73.Text = "Метод эффективного понижения 5го порядка";
-            treeNode74.Name = "Node70";
-            treeNode74.Text = "Теорема Лапласса";
-            treeNode75.Name = "DeterminantsNode";
-            treeNode75.Text = "Детерминант";
-            treeNode76.Name = "Node72";
-            treeNode76.Text = "Произведение матриц A*B и B*A";
-            treeNode77.Name = "Node73";
-            treeNode77.Text = "Линейные комбинации матрицы";
-            treeNode78.Name = "Node74";
-            treeNode78.Text = "Произведение матриц A*A^T и A^T*A";
-            treeNode79.Name = "Node76";
-            treeNode79.Text = "Найти матрицу A^n";
-            treeNode80.Name = "Node80";
-            treeNode80.Text = "Нахождение обратной матрицы";
-            treeNode81.Name = "Node82";
-            treeNode81.Text = "Матричные уравнения";
-            treeNode82.Name = "Node87";
-            treeNode82.Text = "Решение СЛАУ методом Крамера";
-            treeNode83.Name = "Node88";
-            treeNode83.Text = "Решение СЛАУ матричным методом";
-            treeNode84.Name = "Node89";
-            treeNode84.Text = "Решение СЛАУ методом Гаусса";
-            treeNode85.Name = "SlaeNode";
-            treeNode85.Text = "СЛАУ";
-            treeNode86.Name = "Node104";
-            treeNode86.Text = "Скалярное произведение векторов";
-            treeNode87.Name = "Node105";
-            treeNode87.Text = "Скалярное произведение векторов и углы между ними";
-            treeNode88.Name = "Node108";
-            treeNode88.Text = "Угол между векторами";
-            treeNode89.Name = "Node117";
-            treeNode89.Text = "Векторное произведение векторов";
-            treeNode90.Name = "Node118";
-            treeNode90.Text = "Упростить выражение";
-            treeNode91.Name = "Node119";
-            treeNode91.Text = "Площадь треугольника и его высота";
-            treeNode92.Name = "Node125";
-            treeNode92.Text = "Компланарность векторов";
-            treeNode93.Name = "Node126";
-            treeNode93.Text = "Векторы в плоскости";
-            treeNode94.Name = "Node152";
-            treeNode94.Text = "Пересечение точкой плоскости";
-            treeNode95.Name = "Node160";
-            treeNode95.Text = "Расстояние от точки до плоскости";
-            treeNode96.Name = "AnalyticalGeometryNode";
-            treeNode96.Text = "Аналитическая геометрия";
+            treeNode97.Name = "Node4";
+            treeNode97.Text = "Нахождение действительных значений";
+            treeNode98.Name = "Node19";
+            treeNode98.Text = "Представление в показательной форме";
+            treeNode99.Name = "ComplexNode";
+            treeNode99.Text = "Комплексные числа";
+            treeNode100.Name = "Node46";
+            treeNode100.Text = "Число инверсий в перестановках";
+            treeNode101.Name = "Node58";
+            treeNode101.Text = "Определитель 2-го порядка";
+            treeNode102.Name = "Node60";
+            treeNode102.Text = "Определитель 3-его порядка";
+            treeNode103.Name = "Node67";
+            treeNode103.Text = "Теорема о разложении 4го порядка";
+            treeNode104.Name = "Node68";
+            treeNode104.Text = "Метод эффективного понижения 4го порядка";
+            treeNode105.Name = "Node69";
+            treeNode105.Text = "Метод эффективного понижения 5го порядка";
+            treeNode106.Name = "Node70";
+            treeNode106.Text = "Теорема Лапласса";
+            treeNode107.Name = "DeterminantsNode";
+            treeNode107.Text = "Детерминант";
+            treeNode108.Name = "Node72";
+            treeNode108.Text = "Произведение матриц A*B и B*A";
+            treeNode109.Name = "Node73";
+            treeNode109.Text = "Линейные комбинации матрицы";
+            treeNode110.Name = "Node74";
+            treeNode110.Text = "Произведение матриц A*A^T и A^T*A";
+            treeNode111.Name = "Node76";
+            treeNode111.Text = "Найти матрицу A^n";
+            treeNode112.Name = "Node80";
+            treeNode112.Text = "Нахождение обратной матрицы";
+            treeNode113.Name = "Node82";
+            treeNode113.Text = "Матричные уравнения";
+            treeNode114.Name = "Node87";
+            treeNode114.Text = "Решение СЛАУ методом Крамера";
+            treeNode115.Name = "Node88";
+            treeNode115.Text = "Решение СЛАУ матричным методом";
+            treeNode116.Name = "Node89";
+            treeNode116.Text = "Решение СЛАУ методом Гаусса";
+            treeNode117.Name = "SlaeNode";
+            treeNode117.Text = "СЛАУ";
+            treeNode118.Name = "Node104";
+            treeNode118.Text = "Скалярное произведение векторов";
+            treeNode119.Name = "Node105";
+            treeNode119.Text = "Скалярное произведение векторов и углы между ними";
+            treeNode120.Name = "Node108";
+            treeNode120.Text = "Угол между векторами";
+            treeNode121.Name = "Node117";
+            treeNode121.Text = "Векторное произведение векторов";
+            treeNode122.Name = "Node118";
+            treeNode122.Text = "Упростить выражение";
+            treeNode123.Name = "Node119";
+            treeNode123.Text = "Площадь треугольника и его высота";
+            treeNode124.Name = "Node125";
+            treeNode124.Text = "Компланарность векторов";
+            treeNode125.Name = "Node126";
+            treeNode125.Text = "Векторы в плоскости";
+            treeNode126.Name = "Node152";
+            treeNode126.Text = "Пересечение точкой плоскости";
+            treeNode127.Name = "Node160";
+            treeNode127.Text = "Расстояние от точки до плоскости";
+            treeNode128.Name = "AnalyticalGeometryNode";
+            treeNode128.Text = "Аналитическая геометрия";
             this.kryptonTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode67,
-            treeNode75,
-            treeNode85,
-            treeNode96});
+            treeNode99,
+            treeNode107,
+            treeNode117,
+            treeNode128});
             this.kryptonTreeView1.Size = new System.Drawing.Size(398, 331);
             this.kryptonTreeView1.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -471,18 +470,6 @@ namespace GenaratorAiG
             this.ChooseLabel.Size = new System.Drawing.Size(115, 16);
             this.ChooseLabel.TabIndex = 4;
             this.ChooseLabel.Text = "Выберите темы:";
-            // 
-            // CounterLabel
-            // 
-            this.CounterLabel.AutoSize = true;
-            this.CounterLabel.BackColor = System.Drawing.Color.White;
-            this.CounterLabel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CounterLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(144)))), ((int)(((byte)(254)))));
-            this.CounterLabel.Location = new System.Drawing.Point(368, 38);
-            this.CounterLabel.Name = "CounterLabel";
-            this.CounterLabel.Size = new System.Drawing.Size(25, 25);
-            this.CounterLabel.TabIndex = 9;
-            this.CounterLabel.Text = "0";
             // 
             // VariousLabel
             // 
@@ -544,7 +531,6 @@ namespace GenaratorAiG
             this.Controls.Add(this.WebBrowser);
             this.Controls.Add(this.VariantTextBox);
             this.Controls.Add(this.VariousLabel);
-            this.Controls.Add(this.CounterLabel);
             this.Controls.Add(this.kryptonTreeView1);
             this.Controls.Add(this.PrintButton);
             this.Controls.Add(this.DownloadButton);
@@ -572,7 +558,6 @@ namespace GenaratorAiG
         private Krypton.Toolkit.KryptonButton kryptonButton1;
         private Krypton.Toolkit.KryptonTreeView kryptonTreeView1;
         private System.Windows.Forms.Label ChooseLabel;
-        private System.Windows.Forms.Label CounterLabel;
         private System.Windows.Forms.Label VariousLabel;
         private Krypton.Toolkit.KryptonMaskedTextBox VariantTextBox;
         private Krypton.Toolkit.KryptonWebBrowser WebBrowser;
