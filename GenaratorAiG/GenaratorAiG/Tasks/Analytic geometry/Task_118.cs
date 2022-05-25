@@ -5,7 +5,7 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
     {
         public Task_118(Random random)
         {
-            Description = "Упростите выражение\n:";
+            Description = "Упростите выражение:\n$$$";
             int[] pm = new int[] { -1, 1 };
             int a0 = pm[random.Next(0, 2)] * random.Next(1, 5), b0 = pm[random.Next(0, 2)] * random.Next(1, 5), c0 = pm[random.Next(0, 2)] * random.Next(1, 5),
                 a1 = pm[random.Next(0, 2)] * random.Next(1, 5), b1 = pm[random.Next(0, 2)] * random.Next(1, 5), c1 = pm[random.Next(0, 2)] * random.Next(1, 5);
