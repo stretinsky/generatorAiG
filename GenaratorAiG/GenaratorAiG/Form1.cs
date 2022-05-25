@@ -27,8 +27,9 @@ namespace GenaratorAiG
     {
         private PdfBuilder pdf = new PdfBuilder();
         private PdfBuilder pdfAnswers = new PdfBuilder();
+        private PdfBuilder resultPdf = new PdfBuilder();
         string fileName;
-        byte counter = 0, variant;
+        int variant;
         public Form1()
         {
             InitializeComponent();
@@ -48,6 +49,9 @@ namespace GenaratorAiG
             pdfAnswers.ClearHtml();
             pdfAnswers.Various = 0;
             Random random = new Random();
+
+            resultPdf.ClearHtml();
+            resultPdf.Various = 0;
 
             for (int k = 0; k < variant; k++)
             {
@@ -98,6 +102,10 @@ namespace GenaratorAiG
                 pdfAnswers.Various++;
                 pdfAnswers.WriteVariant();
 
+                resultPdf.Number = 0;
+                resultPdf.Various++;
+                resultPdf.WriteVariant();
+
                 try
                 {
                     for (int i = 0; i < 4; i++)
@@ -109,8 +117,11 @@ namespace GenaratorAiG
                                 ITask task = tr.Tag as ITask;
 
                                 pdf.HandleTask(task.GetDescription(), task.GetCondition());
-                                pdf.ShowAnswer(task.GetAnswer(), false);
+                                pdf.ShowAnswer(task.GetAnswer(), true);
                                 pdfAnswers.ShowAnswer(task.GetAnswer());
+
+                                resultPdf.HandleTask(task.GetDescription(), task.GetCondition());
+                                resultPdf.ShowAnswer(task.GetAnswer(), false);
                             }
                         }
                     }
@@ -121,7 +132,7 @@ namespace GenaratorAiG
                 }
             }
 
-            WebBrowser.DocumentText = pdf.GetHTML();
+            WebBrowser.DocumentText = resultPdf.GetHTML();
         }
 
         private void DownloadButton_Click(object sender, EventArgs e)
