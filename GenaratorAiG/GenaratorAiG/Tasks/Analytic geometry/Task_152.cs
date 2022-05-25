@@ -51,6 +51,8 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
 
         public List<string> GetAnswer()
         {
+            result = "";
+            resultLATEX = "";
             if (x * points[0, 0] - y * points[0, 1] + z * points[0, 2] + p == 0)
             {
                 result += $"A ПРОХОДИТ через плоскость, \\;";

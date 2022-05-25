@@ -39,6 +39,7 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
 
         public List<string> GetCondition()
         {
+            condition = "";
             condition += $"\\vec{{a}} = {vectors[0, 0]}\\vec{{i}}";
 
             if (vectors[0, 1] >= 0)
@@ -68,6 +69,7 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
 
         public List<string> GetAnswer()
         {
+            result = "";
             result += $"\\vec{{ab}} = ";
             result += "\\pmatrix{ \\vec{i} & \\vec{j} & \\vec{k} \\\\" +
                 $"{vectors[0, 0]} & {vectors[0, 1]} & {vectors[0, 2]} \\\\ {vectors[1, 0]} & {vectors[1, 1]} & {vectors[1, 2]} }} = ";
