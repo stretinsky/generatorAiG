@@ -50,7 +50,7 @@ namespace GenaratorAiG
             {
                 Bitmap img = latexHandler.CreateLatexImage(latex[0]);
                 string imgDataURI = IronPdf.Imaging.ImageUtilities.ImageToDataUri(img);
-                string imgHtml = string.Format("<img src='{0}' width ='{1}' height='{2}'>", imgDataURI, img.Width, img.Height);
+                string imgHtml = string.Format("<img src='{0}' width ='{1}' height='{2}' align='absmiddle'>", imgDataURI, img.Width, img.Height);
                 html += $"<p style='font-size:{fontSize};font-family:{font};'>{condition.Trim()} <br>{imgHtml}</p>";
                 img.Dispose();
             }
@@ -104,20 +104,21 @@ namespace GenaratorAiG
         public void ShowAnswer(string[] answerFormules, bool increment = true)
         {
             string answer = "";
+            html += $"<p style='font-size:{fontSize};font-family:{font};'>";
             if (increment)
             {
                 number++;
-                answer = number.ToString() + ". ";
+                html += number.ToString() + ". ";
             }
+            else html += $"Ответ:";
             Bitmap img = null;
             string imgDataURI;
             string imgHtml;
-            html += $"<p style='font-size:{fontSize};font-family:{font};'>Ответ:";
             foreach (string formule in answerFormules)
             {
                 img = latexHandler.CreateLatexImage(answer + formule);
                 imgDataURI = IronPdf.Imaging.ImageUtilities.ImageToDataUri(img);
-                imgHtml = string.Format("<img src='{0}' width ='{1}' height='{2}'>", imgDataURI, img.Width, img.Height);
+                imgHtml = string.Format("<img src='{0}' width ='{1}' height='{2}' align='absmiddle'>", imgDataURI, img.Width, img.Height);
                 html += "&nbsp;" + imgHtml;
             }
             html += "</p>";

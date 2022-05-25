@@ -120,7 +120,6 @@ namespace GenaratorAiG
                                 ITask task = tr.Tag as ITask;
 
                                 pdf.HandleTask(task.GetDescription(), task.GetCondition());
-                                pdf.ShowAnswer(task.GetAnswer(), true);
 
                                 pdfAnswers.ShowAnswer(task.GetAnswer());
 
