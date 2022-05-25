@@ -9,7 +9,6 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
 {
     class Task_105 : Task
     {
-        private string latex = "";
         private string letters = "abcdefghijklmnopqrstuvwxyz";
         public Task_105(int n, Random random)
         {
@@ -27,6 +26,7 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
         }
         public void GenerateTask(int n, Random random)
         {
+            string latex = "";
             for (int i = 0; i < n; i++)
             {
                 Vector a = new Vector(0, 0, 0), b = new Vector(0, 0, 0);
@@ -35,6 +35,9 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
                 latex += letters[i] + $")\\vec{{a}}=({a.Coordinates[0]}, {a.Coordinates[1]}, {a.Coordinates[2]})," +
                     $"\\vec{{b}}=({b.Coordinates[0]}, {b.Coordinates[1]}, {b.Coordinates[2]})";
                 taskLatex.Add(latex);
+                latex = "";
+                Description += "$";
+
                 double angle = Math.Round(180 / Math.PI * Math.Acos(a.ScalarProduct(b) / Math.Sqrt(a.ScalarProduct(a)) / Math.Sqrt(b.ScalarProduct(b))), 5);
                 answerLatex.Add("\\arccos{\\frac{" + a.ScalarProduct(b) + "}{" +
                     StringSqrt(a.ScalarProduct(a)) + StringSqrt(b.ScalarProduct(b)) + "}}\\approx" + angle + "^{\\circ}");
