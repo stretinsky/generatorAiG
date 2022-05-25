@@ -109,6 +109,7 @@ namespace GenaratorAiG
                                 ITask task = tr.Tag as ITask;
 
                                 pdf.HandleTask(task.GetDescription(), task.GetCondition());
+                                pdf.ShowAnswer(task.GetAnswer(), false);
                                 pdfAnswers.ShowAnswer(task.GetAnswer());
                             }
                         }

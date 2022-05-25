@@ -89,10 +89,12 @@ namespace GenaratorAiG
         {
             HandleTask(condition, latex.ToArray());
         }
-        public void ShowAnswer(string answerPre)
+        public void ShowAnswer(string answerPre, bool increment = true)
         {
-            number++;
-            string answer = number.ToString() + ". " + answerPre;
+            if (increment) number++;
+            string answer;
+            if (increment) answer = number.ToString() + ". " + answerPre;
+            else answer = answerPre;
 
             Bitmap img = latexHandler.CreateLatexImage(answer);
             string imgDataURI = IronPdf.Imaging.ImageUtilities.ImageToDataUri(img);
