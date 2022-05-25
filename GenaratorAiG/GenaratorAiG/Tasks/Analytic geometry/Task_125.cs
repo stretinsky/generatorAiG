@@ -43,9 +43,9 @@ namespace GenaratorAiG.Tasks.Analytic_geometry
         {
             List<string> result = new List<string>();
             if (determinant == 0)
-                result.Add($"No, \\Delta = {determinant}"); //todo (Localization)
-            else
                 result.Add($"Yes, \\Delta = {determinant}"); //todo (Localization)
+            else
+                result.Add($"No, \\Delta = {determinant}"); //todo (Localization)
             return result;
         }
     }
